@@ -4,9 +4,7 @@ class Allfavories {
   int  id;
   int numsourate;
   int ontap=0;
-  //Verset verset;
   String date;
-  //Sourate sourate;
   String varabe;
   String vwolof;
   int numverset;

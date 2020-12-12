@@ -23,33 +23,17 @@ class _ParametresState extends State<Parametres> {
     super.initState();
   }
 
-  // void _update(BuildContext context, Fond fond) async {
-  //  //await databaseHelper.updateFond(fond);
-  //   updateListView();
-  // }
-
-  //  void updateListView() {
-  //   final Future<Database> dbFuture = databaseHelper.initializeDatabase();
-
-  //   dbFuture.then((database) {
-  //     Future<List<Fond>> fondFutureList =
-  //         databaseHelper.getfontsList();
-  //     fondFutureList.then((fonLists) {
-  //       setState(() {
-  //         this.fondlists = fonLists;
-  //       });
-  //     });
-  //   });
-  // }
 
   List<DropdownMenuItem<Lecteur>> buildDropdownItem(List lecteurs) {
     List<DropdownMenuItem<Lecteur>> items = List();
-    for (Lecteur lecteur in lecteurs) {
-      items.add(DropdownMenuItem(
+   lecteurs.forEach((lecteur) {
+     items.add(DropdownMenuItem(
           value: lecteur,
           child:
               Text(lecteur.prenom + ' ' + lecteur.nom)));
-    }
+    
+   }) ;
+      
 
     return items;
   }

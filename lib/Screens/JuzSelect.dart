@@ -58,15 +58,14 @@ class _JusSelectState extends State<JusSelect> {
   MyPopupItem _select = listitemsurate[0];
    List<DropdownMenuItem<Verset>> buildDropdownItem(List versets) {
     List<DropdownMenuItem<Verset>> items = List();
-    for (Verset verset in versets) {
-      items.add(DropdownMenuItem(
+      versets.forEach((verset) {
+        items.add(DropdownMenuItem(
           value: verset,
           child:
-              Text('${verset.numv}')
-              
+              Text('${verset.numv}')          
               )
               );
-    }
+      });
     return items;
   }
   onChangeVerset(Verset select) {

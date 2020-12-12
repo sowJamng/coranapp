@@ -13,11 +13,14 @@ class Ajiza {
           
 List<Verset> recupererJuz(Sourate sourate , int numero){
 Sourate souraterecup = new Sourate(nom:'',nbaya:'',audio:'',nomarabe:'',versets: new List<Verset>());
-for(var i= numero;i<sourate.versets.length;i++){
- souraterecup.versets.add(sourate.versets[i]);
+// for(var i= numero;i<sourate.versets.length;i++){
+  sourate.versets.forEach((verset) {
+    souraterecup.versets.add(verset);
+  });
+      return souraterecup.versets;
 }
-return souraterecup.versets;
-}
+
+
 Ajiza fatiha 
 =   new Ajiza(sourate:fatiya,numeroaya:1,beginaya:"بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",  beginverset: recupererJuz(fatiya, 0));
 Ajiza baquara26= new Ajiza(sourate:baqara,numeroaya:26,beginaya:'إِنَّ اللَّهَ لاَ يَسْتَحْيِي أَن',  beginverset: recupererJuz(baqara, 25));
