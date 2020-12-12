@@ -35,7 +35,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   int numofindex;
   // Verset _selectedverset;
   bool disabledDown = true;
-  MyPopupItem _select = listitem[0];
+  MyPopupItem _select = listitem[0]; 
 
   void _selectedItem(MyPopupItem item) {
     setState(() {
