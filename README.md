@@ -1,6 +1,6 @@
 # coran
 
-A new coran application with traduction of verses in wolf and you can learn et listen all verses of quran
+A new coran application with traduction of verses in wolf and you can learn et listen all verses of quran dou you want
 
 ## Getting Started
 
