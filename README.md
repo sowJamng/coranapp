@@ -1,6 +1,6 @@
 # coran
 
-A new Flutter application.
+A new application coranique with the traduction of the verses in wolof ,you can read end learn te sourat of quran.
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-# [![Flutter logo][]][flutter.dev]
+#[![Flutter logo][]][flutter.dev]
 
 [![Build Status - Cirrus][]][Build status]
 [![Gitter Channel][]][Gitter badge]

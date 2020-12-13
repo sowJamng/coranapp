@@ -502,23 +502,16 @@ Future stop(String url)
       ),
     );
   }
-  int comparePosition(){
-    if((position != null)&&(position.inSeconds<=04)){
-      return 0;
-    }
-    return 1;
-  }   
+  // int comparePosition(){
+  //   if((position != null)&&(position.inSeconds<=04)){
+  //     return 0;
+  //   }
+  //   return 1;
+  // }   
    void share(BuildContext context, Verset verset,Sourate sourate,final numero){
      final RenderBox box= context.findRenderObject();
      txt=verset.arabe;
      final String text= " ( ${verset.arabe} ) \n ${verset.wolof} \n [ ${sourate.nom} : $numero ]";
     Share.share(text,subject:text,sharePositionOrigin: box.localToGlobal(Offset.zero )& box.size);
-   }
-   void favory(BuildContext context, Verset verset,Sourate sourate ){
-   }
-   void jouerAudio(String audio){
-
-   }
-   void pauseAudio(String audio){
    }
 }
