@@ -1,13 +1,12 @@
 
-
 import 'package:coran/BaseDonnees/DatabaseSourate.dart';
 import 'package:coran/Model/Allsourate.dart';
 import 'package:coran/Model/MesAjiza.dart';
 import 'package:coran/Model/MesSourates.dart';
 import 'package:coran/Model/MyPopupItem.dart';
-import 'package:coran/Screens/Invocations.dart';
 import 'package:coran/Screens/Parametres.dart';
 import 'package:coran/Screens/RappelsIslam.dart';
+import 'package:coran/Screens/Readpdf.dart';
 import 'package:coran/Screens/sourates.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
@@ -185,7 +184,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 icon: Icon(Icons.book),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Lecture()));
+                      MaterialPageRoute(
+                        builder: (context) => ReadChapitre(title:' Invocations et Citadelle du Musulman',chap: 'assets/invocations/citadelle.pdf')
+                        //Lecture()
+                        ));
                 }),
             PopupMenuButton<MyPopupItem>(
                 elevation: 0,

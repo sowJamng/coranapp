@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_plugin_pdf_viewer/flutter_plugin_pdf_viewer.dart';
 
-class Lecture extends StatefulWidget {
+class ReadChapitre extends StatefulWidget {
+  final String  chap;
+  final String title;
+
+  const ReadChapitre({Key key, this.title,this.chap}) : super(key: key);
   @override
-  _LectureState createState() => _LectureState();
+  _ReadChapitreState createState() => _ReadChapitreState();
 }
 
-class _LectureState extends State<Lecture> {
-  String assetpdf ='assets/invocations/citadelle.pdf';
-   // "assets/invocations/invocations.pdf";
+class _ReadChapitreState extends State<ReadChapitre> {
   PDFDocument _doc;
   bool _loading;
 
@@ -22,7 +24,7 @@ class _LectureState extends State<Lecture> {
     setState(() {
       _loading = true;
     });
-    final doc = await PDFDocument.fromAsset(assetpdf);
+    final doc = await PDFDocument.fromAsset(widget.chap);
     setState(() {
       _doc = doc;
       _loading = false;
@@ -35,7 +37,7 @@ class _LectureState extends State<Lecture> {
       backgroundColor: Colors.transparent,
       appBar: AppBar(
         title: Text(
-          "Invocations et Citadelle du Musulman",
+          widget.title,
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
           textAlign: TextAlign.center,
         ),
