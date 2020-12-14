@@ -21,6 +21,68 @@ class Sourate {
   List<Lecteur> getLecteurs()=>this.lecteurs;
 
 }
+class Sujod{
+  Sourate sourate;
+  int numverset;
+  List<int> etoiles;
+  Sujod({this.sourate,this.numverset,this.etoiles});
+  Sourate getSourate()=>this.sourate;
+  int getNumverset()=>this.numverset;
+  List<int> getEtoiles()=>this.etoiles;
+
+  static bool withSujod(Sourate sourate,int numverset){
+     bool verify=false;
+    //  sujods.forEach((sujod){
+      for(Sujod sujod in sujods){
+           if((sujod.getSourate()==sourate)&&(numverset==sujod.getNumverset()))
+            { verify=true;    
+             break; 
+            }
+        }  
+        return verify;
+  }     
+
+  static bool withStart(Sourate sourate,int numeroverset){
+     bool verify=false;
+    //  sujods.forEach((sujod){
+      for(Sujod sujod in start){
+           if((sujod.getSourate()==sourate))
+            {
+              for(int numverset in sujod.getEtoiles())
+              if(numverset==numeroverset)
+              {  verify=true;    
+                  break; 
+              }
+              // break;
+            }
+        }  
+        return verify;
+  }       
+}
+List<Sujod> sujods=[
+  Sujod(sourate:alalaq,numverset:19),
+  Sujod(sourate:araf,numverset:206),
+  Sujod(sourate:arrad,numverset:15),
+  Sujod(sourate:annahl,numverset:49),
+  Sujod(sourate:alisra,numverset:109),
+  Sujod(sourate:maryam,numverset:58),
+  Sujod(sourate:alhadjj,numverset:18),
+  Sujod(sourate:alhadjj,numverset:77),
+  Sujod(sourate:furqan,numverset:60),
+  Sujod(sourate:annaml,numverset:26),
+  Sujod(sourate:asajdah,numverset:15),
+  Sujod(sourate:sad,numverset:15),
+  Sujod(sourate:fussila,numverset:37),
+  Sujod(sourate:annajm,numverset:62),
+  Sujod(sourate:inshiqaq,numverset:21)
+];
+
+List<Sujod> start=[
+Sujod(sourate:baqara,etoiles:[26,44,60,75,95,106,124,142,158,177,203,219,233,243,253,263,272,283]),
+Sujod(sourate:imran,etoiles:[15,33,52,75,93,113,133,153,171,186]),
+
+];
+
 List<Sourate> sourates=[fatiya,baqara,imran,nisa,maIda,anam,araf,anfal,tawbah,yunus,hud,ibrahim,yussuf,maryam,taha];
 
 // je me suis aussi arrete au sourate 7 verset 71

@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'Home.dart';
 import 'JuzSelect.dart';
 import 'Parametres.dart';
-//
-//import 'package:draggable_scrollbar/draggable_scrollbar.dart';
+
 
 class MyAjiza extends StatefulWidget {
   static List<MesAjiza> ajizadisplay = List<MesAjiza>();

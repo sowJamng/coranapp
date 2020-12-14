@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_plugin_pdf_viewer/flutter_plugin_pdf_viewer.dart';
-//import 'main.dart';
+
+import 'Readpdf.dart';
+
 class Chapitres extends StatefulWidget {
   @override
   _ChapitresState createState() => _ChapitresState();
@@ -30,7 +31,7 @@ class _ChapitresState extends State<Chapitres> {
     //       )
     //     );
     //     },
-    // child:Scaffold(
+
       return Scaffold(
             backgroundColor: Colors.white,
             body: Container(
@@ -48,7 +49,7 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap: 'assets/invocations/Debutdelacreation.pdf')));
+                              builder: (context) => ReadChapitre(title:'',chap: 'assets/invocations/Debutdelacreation.pdf')));
                         },
                       ),
                     ),
@@ -63,7 +64,7 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap :'OrdonnerleBienet.pdf')));
+                              builder: (context) => ReadChapitre(title:'',chap :'OrdonnerleBienet.pdf')));
                         },
                       ),
                     ),
@@ -78,7 +79,7 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap : 'chap3')));
+                              builder: (context) => ReadChapitre(title:'',chap : 'title:'',chap3')));
                         },
                       ),
                     ),
@@ -92,11 +93,11 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap : 'chap4')));
+                              builder: (context) => ReadChapitre(title:'',chap : 'title:'',chap4')));
                         },
 
                       ),
-                    ),
+                    ), 
                      SizedBox(height: 30.0,),
                     Card(
                       child: ListTile(
@@ -107,7 +108,7 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap : 'chap5')));
+                              builder: (context) => ReadChapitre(title:'',chap : 'title:'',chap5')));
                         },
 
                       ),
@@ -122,7 +123,7 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap : 'chap6')));
+                              builder: (context) => ReadChapitre(title:'',chap : 'title:'',chap6')));
                         },
 
                       ),
@@ -137,7 +138,7 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap : 'chap7')));
+                              builder: (context) => ReadChapitre(title:'',chap : 'title:'',chap7')));
                         },
 
                       ),
@@ -152,7 +153,7 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap : 'chap8')));
+                              builder: (context) => ReadChapitre(title:'',chap : 'title:'',chap8')));
                         },
 
                       ),
@@ -167,7 +168,7 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap : 'chap9')));
+                              builder: (context) => ReadChapitre(title:'',chap : 'title:'',chap9')));
                         },
 
                       ),
@@ -182,7 +183,7 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap : 'chap10')));
+                              builder: (context) => ReadChapitre(title:'',chap : 'title:'',chap10')));
                         },
 
                       ),
@@ -197,7 +198,7 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap : 'chap11')));
+                              builder: (context) => ReadChapitre(title:'',chap : 'title:'',chap11')));
                         },
 
                       ),
@@ -212,7 +213,7 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap : 'chap12')));
+                              builder: (context) => ReadChapitre(title:'',chap : 'title:'',chap12')));
                         },
 
                       ),
@@ -227,7 +228,7 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap : 'chap13')));
+                              builder: (context) => ReadChapitre(title:'',chap : 'title:'',chap13')));
                         },
 
                       ),
@@ -242,7 +243,7 @@ class _ChapitresState extends State<Chapitres> {
                         //isThreeLine: true,
                         onTap:() {
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => Chapitreone(chap : 'chap15')));
+                              builder: (context) => ReadChapitre(title:'',chap : 'title:'',chap15')));
                         },
 
                       ),
@@ -254,56 +255,5 @@ class _ChapitresState extends State<Chapitres> {
   }
 
 }
-class Chapitreone extends StatefulWidget {
-  final String  chap;
 
-  const Chapitreone({Key key, this.chap}) : super(key: key);
-  @override
-  _ChapitreoneState createState() => _ChapitreoneState();
-}
-
-class _ChapitreoneState extends State<Chapitreone> {
-  PDFDocument _doc;
-  bool _loading;
-
-  @override
-  void initState() {
-    super.initState();
-    _initPdf();
-  }
-
-  _initPdf() async {
-    setState(() {
-      _loading = true;
-    });
-    final doc = await PDFDocument.fromAsset(widget.chap);
-    setState(() {
-      _doc = doc;
-      _loading = false;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      appBar: AppBar(
-        // title: Text(
-        //   "Invocations et Citadelle du Musulman",
-        //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-        //   textAlign: TextAlign.center,
-        // ),
-      ),
-      body: _loading
-          ? Center(
-              child: CircularProgressIndicator(),
-            )
-          : PDFViewer(
-              document: _doc,
-              showIndicator: true,
-              showPicker: false,
-            ),
-    );
-  }
-}
 

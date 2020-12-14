@@ -13,7 +13,6 @@ class Ajiza {
           
 List<Verset> recupererJuz(Sourate sourate , int numero){
 Sourate souraterecup = new Sourate(nom:'',nbaya:'',audio:'',nomarabe:'',versets: new List<Verset>());
-// for(var i= numero;i<sourate.versets.length;i++){
   sourate.versets.forEach((verset) {
     souraterecup.versets.add(verset);
   });

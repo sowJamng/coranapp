@@ -1,14 +1,11 @@
-
 import 'package:coran/Model/Lecteurs.dart';
 import 'package:flutter/material.dart';
 
 class Parametres extends StatefulWidget {
   static bool trad = true;
   static bool fond = false;
-  static  bool trans = true;
- // static Sourate continuesourate = fatiya;
-  //static String num = "001";
-  static Lecteur lecteur= Lecteur.meslecteurs[0];
+  static bool trans = true;
+  static Lecteur lecteur = Lecteur.meslecteurs[0];
   @override
   _ParametresState createState() => _ParametresState();
 }
@@ -23,17 +20,12 @@ class _ParametresState extends State<Parametres> {
     super.initState();
   }
 
-
   List<DropdownMenuItem<Lecteur>> buildDropdownItem(List lecteurs) {
     List<DropdownMenuItem<Lecteur>> items = List();
-   lecteurs.forEach((lecteur) {
-     items.add(DropdownMenuItem(
-          value: lecteur,
-          child:
-              Text(lecteur.prenom + ' ' + lecteur.nom)));
-    
-   }) ;
-      
+    lecteurs.forEach((lecteur) {
+      items.add(DropdownMenuItem(
+          value: lecteur, child: Text(lecteur.prenom + ' ' + lecteur.nom)));
+    });
 
     return items;
   }
@@ -41,13 +33,12 @@ class _ParametresState extends State<Parametres> {
   onChangeLecteur(Lecteur select) {
     setState(() {
       _selectedlecteur = select;
-      Parametres.lecteur=_selectedlecteur;
+      Parametres.lecteur = _selectedlecteur;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-   
     return Scaffold(
       backgroundColor: Color(0xFF05966D),
       appBar: AppBar(
@@ -58,23 +49,11 @@ class _ParametresState extends State<Parametres> {
       body: Container(
         child: Column(
           children: <Widget>[
-            //SwitchListTile(
-            // title: const Text('Gestion des audios',style: TextStyle(color:Colors.white)),
-            // subtitle: Text('Gestion de telechargement des Audios',style: TextStyle(color:Colors.white),),
-            // value: _lights,
-            // onChanged: (bool value) {
-            //   setState(() {
-            //     _lights = value;
-            //   });
-            // },
-            // secondary: const Icon(Icons.lightbulb_outline),
-            //    ),
             SizedBox(
               height: 15.0,
             ),
             SwitchListTile(
-              title: const Text('Thème',
-                  style: TextStyle(color: Colors.white)),
+              title: const Text('Thème', style: TextStyle(color: Colors.white)),
               subtitle:
                   Text("Thème Sombre", style: TextStyle(color: Colors.white)),
               value: Parametres.fond,
@@ -90,7 +69,6 @@ class _ParametresState extends State<Parametres> {
             SizedBox(
               height: 10.0,
             ),
-
             SwitchListTile(
               title: const Text('Traduction',
                   style: TextStyle(
@@ -107,12 +85,10 @@ class _ParametresState extends State<Parametres> {
               },
               activeColor: Colors.green,
               activeTrackColor: Colors.greenAccent[400],
-              // secondary: const Icon(Icons.),
             ),
             SizedBox(
               height: 10.0,
             ),
-
             SwitchListTile(
               title: const Text('Transcription ',
                   style: TextStyle(color: Colors.white)),
@@ -126,15 +102,13 @@ class _ParametresState extends State<Parametres> {
               },
               activeColor: Colors.green,
               activeTrackColor: Colors.greenAccent[400],
-              //secondary: const Icon(Icons.text_fields),
             ),
             Text('Selectionner un Lecteur',
-                style: TextStyle(color: Colors.white,fontSize: 15.0)),
+                style: TextStyle(color: Colors.white, fontSize: 15.0)),
             Container(
               child: Center(
                 child: Column(
                   children: <Widget>[
-                    //SizedBox(height:10.0),
                     DropdownButton(
                       value: _selectedlecteur,
                       items: _dropdownmenuItems,
@@ -143,20 +117,6 @@ class _ParametresState extends State<Parametres> {
                       hint: Text('Lecteur',
                           style: TextStyle(color: Colors.white)),
                     ),
-                    // FlatButton(
-                    //   child: new Text(
-                    //     'Ok',
-                    //     style: TextStyle(color: Colors.white,fontSize: 12.0),
-                    //   ),
-                    //   onPressed: () {
-                    //     // Navigator.push(context,
-                    //     //       MaterialPageRoute(
-                    //     //         builder: (_) => Search(lecteur:_selectedlecteur,numero:_selectedverset.numero),
-                    //     //       ),
-                    //     //       );
-                    //      Parametres.lecteur=_selectedlecteur;
-                    //   },
-                    // ),
                   ],
                 ),
               ),
@@ -166,32 +126,4 @@ class _ParametresState extends State<Parametres> {
       ),
     );
   }
-  // displayDialogue(BuildContext context) async {
-  //   return Column(
-  //             mainAxisSize: MainAxisSize.min,
-  //             children: <Widget>[
-  //               DropdownButton(
-  //                 value: _selectedlecteur,
-  //                 items: _dropdownmenuItems,
-  //                 onChanged: (_value) => onChangeLecteur(_value),
-  //                 isExpanded: false,
-  //                 hint: Text('lecteur'),
-  //               ),
-  //               FlatButton(
-  //                 child: new Text(
-  //                   'Ok',
-  //                   style: TextStyle(color: Colors.green),
-  //                 ),
-  //                 onPressed: () {
-  //                   // Navigator.push(context,
-  //                   //       MaterialPageRoute(
-  //                   //         builder: (_) => Search(lecteur:_selectedlecteur,numero:_selectedverset.numero),
-  //                   //       ),
-  //                   //       );
-  //                   Navigator.of(context).pop();
-  //                 },
-  //               ),
-  //             ],
-  //   );
-  // }
 }

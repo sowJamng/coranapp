@@ -4,7 +4,6 @@ import '../Model/MesSourates.dart';
 import 'Parametres.dart';
 import 'SourateSelect.dart';
 import 'Home.dart';
-//import 'package:intl/date_symbol_data_local.dart' as intl_local_date_data;
 
 class Sourates extends StatefulWidget {
   static List<MesSourates> souratesdisplay = List<MesSourates>();
@@ -21,6 +20,7 @@ class _SouratesState extends State<Sourates> {
     _mysourates = mesSourates;
     Sourates.souratesdisplay = _mysourates;
   }
+
   _searchBar() {
     return Padding(
       padding: EdgeInsets.all(8.0),
@@ -45,14 +45,13 @@ class _SouratesState extends State<Sourates> {
       ),
     );
   }
+
   @override
   Widget build(BuildContext context) {
-  
     return Sourates.souratesdisplay.length > 0
         ? Container(
             color: //fondinit.getFont()==0 ? Color(0xFF223645) : Colors.white,
-            Parametres.fond ? Color(0xFF223645) : Colors.white, 
-
+                Parametres.fond ? Color(0xFF223645) : Colors.white,
             child: SafeArea(
               child: Scrollbar(
                 child: ListView.builder(
@@ -73,9 +72,10 @@ class _SouratesState extends State<Sourates> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (_) => ChatScreen(
-                                      sourate: chat.sourate,
-                                      numero: chat.numero,
-                                      numofindex: 0,),
+                                    sourate: chat.sourate,
+                                    numero: chat.numero,
+                                    numofindex: 0,
+                                  ),
                                 ),
                               ),
                               child: Column(children: <Widget>[
@@ -89,23 +89,28 @@ class _SouratesState extends State<Sourates> {
                                         child: Text('${chat.sourate.numero}')),
                                     title: Text(
                                       chat.sourate.nom,
-                                      style:GoogleFonts.alike(
-                                         fontSize: 15.0, color: Parametres.fond
+                                      style: GoogleFonts.alike(
+                                        fontSize: 15.0,
+                                        color: Parametres.fond
                                             ? Colors.white
                                             : Colors.black,
-                                         ),
+                                      ),
                                     ),
-                                    subtitle: Text(chat.nbaya,
-                                        style:GoogleFonts.alike(
-                                          color: Parametres.fond
+                                    subtitle: Text(
+                                      chat.nbaya,
+                                      style: GoogleFonts.alike(
+                                        color: Parametres.fond
                                             ? Colors.white
                                             : Colors.black,
-                                         ),
-                                        ),
+                                      ),
+                                    ),
                                     trailing: Text(
                                       chat.sourate.nomarabe,
-                                      style: TextStyle( fontFamily: 'mcsgf',
-                                        color: Colors.teal,fontWeight: FontWeight.bold,fontSize: 20.0),
+                                      style: TextStyle(
+                                          fontFamily: 'mcsgf',
+                                          color: Colors.teal,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20.0),
                                     ),
                                   ),
                                 ),
