@@ -8,7 +8,7 @@ Ajiza ajiza;
 String nbaya;
 int hizb;
 String avanthizb;
-MesAjiza({this.numero,this.nbaya, this.ajiza,this.hizb,this.avanthizb});
+MesAjiza({ this.numero, this.nbaya,  this.ajiza, this.hizb, this.avanthizb});
 }
 
 List<MesAjiza> mesAjiza=[

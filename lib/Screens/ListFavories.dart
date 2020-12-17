@@ -14,13 +14,19 @@ class ListFavories extends StatefulWidget {
 }
 
 class _ListFavoriesState extends State<ListFavories> {
+  @override
+  void dispose() {
+    
+    // databaseHelper.close();
+    super.dispose();
+  }
   DatabaseHelper databaseHelper = DatabaseHelper();
-  List<Allfavories> favorilists;
+   List<Allfavories> favorilists;
   int count = 0;
   @override
   Widget build(BuildContext context) {
-    if (favorilists == null) {
-      favorilists = List<Allfavories>();
+    if (favorilists== null) {
+      favorilists = <Allfavories>[];
       updateListView();
     }
     updateListView();
@@ -42,7 +48,7 @@ class _ListFavoriesState extends State<ListFavories> {
                           children: <Widget>[
                             ListTile(
                               title: Text(
-                                  favorilists[index].nomsourate == null
+                                  favorilists[index].getNomSourate().length<1
                                       ? 'nom sourate'
                                       : favorilists[index].nomsourate,
                                   style: TextStyle(
@@ -218,7 +224,13 @@ class _ListFavoriesState extends State<ListFavories> {
   void _delete(BuildContext context, Allfavories favorie) async {
     int result = await databaseHelper.delete(favorie.id);
     if (result == 0) {
-      _showSnackBar(context, 'Suppression effectuee');
+      // _showSnackBar(context, 'Suppression effectuee');
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Suppression effectuee!'),
+        ),
+      );
+    
     }
     updateListView();
   }
@@ -228,16 +240,17 @@ class _ListFavoriesState extends State<ListFavories> {
     updateListView();
   }
 
-  void _showSnackBar(BuildContext context, String message) {
-    final snackbar = SnackBar(content: Text(message));
-    Scaffold.of(context).showSnackBar(snackbar);
-  }
+  // void _showSnackBar(BuildContext context, String message) {
+  //   final snackbar = SnackBar(content: Text(message));
+  //   Scaffold.of(context).showSnackBar(snackbar);
+    
+  // }
 
-  void navigateDetailFavorie(Allfavories favori, String title) async {
-    await Navigator.push(context, MaterialPageRoute(builder: (context) {
-      return ChatScreen();
-    }));
-  }
+  // void navigateDetailFavorie(Allfavories favori, String title) async {
+  //   await Navigator.push(context, MaterialPageRoute(builder: (context) {
+  //     return ChatScreen();
+  //   }));
+  // }
 
   void updateListView() {
     final Future<Database> dbFuture = databaseHelper.initializeDatabase();

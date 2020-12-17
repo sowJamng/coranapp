@@ -6,14 +6,14 @@ import 'SourateSelect.dart';
 import 'Home.dart';
 
 class Sourates extends StatefulWidget {
-  static List<MesSourates> souratesdisplay = List<MesSourates>();
+  static List<MesSourates> souratesdisplay = <MesSourates>[];
 
   @override
   _SouratesState createState() => _SouratesState();
 }
 
 class _SouratesState extends State<Sourates> {
-  List<MesSourates> _mysourates = List<MesSourates>();
+  List<MesSourates> _mysourates = <MesSourates>[];
   @override
   void initState() {
     super.initState();

@@ -11,8 +11,8 @@ class ReadChapitre extends StatefulWidget {
 }
 
 class _ReadChapitreState extends State<ReadChapitre> {
-  PDFDocument _doc;
-  bool _loading;
+   PDFDocument _doc;
+   bool _loading;
 
   @override
   void initState() {

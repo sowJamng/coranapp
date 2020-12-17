@@ -4,8 +4,8 @@ import 'package:sqflite/sqflite.dart';
 import 'dart:io';
 
 class DatabaseHelper {
-  static DatabaseHelper _databaseHelper;  //on cree une seule instance globale
-  static Database _database; // un seul singletron db
+  static  DatabaseHelper _databaseHelper;  //on cree une seule instance globale
+  static  Database _database; // un seul singletron db
   DatabaseHelper._createInstance(); //constructeur nomme pour creer une instance de dbHelper
   
   String favorieTable ='favo_table';
@@ -55,10 +55,10 @@ class DatabaseHelper {
   Future<List<Allfavories >> getFavoriesList() async{
     var favoriMapList=await getFavorieMapList(); //get Map<LIST> from the database
     int count=favoriMapList.length; //count the number of map entries in db table
-    List<Allfavories> favorilist=List<Allfavories>();
+    List<Allfavories> favorilist=<Allfavories>[];
     for(int i=0;i<count;i++){
 
-      favorilist.add( Allfavories.fromMapObjet(favoriMapList[i]));
+      favorilist.add( Allfavories.fromMapObject(favoriMapList[i]));
     }
 
     return favorilist;
@@ -110,5 +110,9 @@ Future<int> verify(int numverset,int numsourate) async{
         List<Map<String, dynamic>>  x=await db.rawQuery('SELECT COUNT (*) FROM $favorieTable');
         int result=Sqflite.firstIntValue(x);
         return result;
+  }
+  Future close() async{
+    var dbClient=await database;
+    dbClient.close();
   }
 }

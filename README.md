@@ -1,10 +1,6 @@
 # coran
 
-<<<<<<< HEAD
 A new coran application with traduction of verses in wolf and you can learn et listen all verses of quran dou you want
-=======
-A new application coranique with the traduction of the verses in wolof ,you can read end learn te sourat of quran.
->>>>>>> bc5dcf951ee414bf00a65c3cd6cce1db73c7f64d
 
 ## Getting Started
 
@@ -19,7 +15,7 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-#[![Flutter logo][]][flutter.dev]
+# [![Flutter logo][]][flutter.dev]
 
 [![Build Status - Cirrus][]][Build status]
 [![Gitter Channel][]][Gitter badge]

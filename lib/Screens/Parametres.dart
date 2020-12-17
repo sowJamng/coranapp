@@ -11,8 +11,8 @@ class Parametres extends StatefulWidget {
 }
 
 class _ParametresState extends State<Parametres> {
-  List<DropdownMenuItem<Lecteur>> _dropdownmenuItems;
-  Lecteur _selectedlecteur;
+   List<DropdownMenuItem<Lecteur>> _dropdownmenuItems;
+   Lecteur _selectedlecteur;
   @override
   void initState() {
     _dropdownmenuItems = buildDropdownItem(Lecteur.meslecteurs);
@@ -21,7 +21,7 @@ class _ParametresState extends State<Parametres> {
   }
 
   List<DropdownMenuItem<Lecteur>> buildDropdownItem(List lecteurs) {
-    List<DropdownMenuItem<Lecteur>> items = List();
+    List<DropdownMenuItem<Lecteur>> items = [];
     lecteurs.forEach((lecteur) {
       items.add(DropdownMenuItem(
           value: lecteur, child: Text(lecteur.prenom + ' ' + lecteur.nom)));

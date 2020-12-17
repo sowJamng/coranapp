@@ -3,17 +3,18 @@ import 'package:flutter/material.dart';
 import 'Home.dart';
 import 'JuzSelect.dart';
 import 'Parametres.dart';
-
+//
+//import 'package:draggable_scrollbar/draggable_scrollbar.dart';
 
 class MyAjiza extends StatefulWidget {
-  static List<MesAjiza> ajizadisplay = List<MesAjiza>();
+  static List<MesAjiza> ajizadisplay = <MesAjiza>[];
   @override
   _MyAjizaState createState() => _MyAjizaState();
 }
 
 class _MyAjizaState extends State<MyAjiza> {
   ScrollController controller = ScrollController();
-  List<MesAjiza> _myajizas = List<MesAjiza>();
+  List<MesAjiza> _myajizas = <MesAjiza>[];
 
   @override
   void initState() {
@@ -51,7 +52,7 @@ class _MyAjizaState extends State<MyAjiza> {
 
   @override
   Widget build(BuildContext context) {
-    return MyAjiza.ajizadisplay.length > 0
+    return MyAjiza.ajizadisplay!=null 
         ? Container(
             color: Parametres.fond ? Color(0xFF223645) : Colors.white,
             child: SafeArea(

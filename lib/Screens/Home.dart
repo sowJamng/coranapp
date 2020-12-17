@@ -1,4 +1,5 @@
 
+
 import 'package:coran/BaseDonnees/DatabaseSourate.dart';
 import 'package:coran/Model/Allsourate.dart';
 import 'package:coran/Model/MesAjiza.dart';
@@ -21,17 +22,23 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
-  TabController _tabController;
+ TabController _tabController;
   // List<DropdownMenuItem<Sourate>> _dropdownmenuItems;
   // List<DropdownMenuItem<Verset>> _dropdownmenuItemsv;
   //Sourate _selectedsourate;
   DatabaseHelperSourate helpersourate=DatabaseHelperSourate();
   
-  List<SourateCourante> listsourateCourante;
-  SourateCourante sourateCourante;
-  Sourate sourate;
-  String numero;
-  int numofindex;
+   List<SourateCourante> listsourateCourante;
+   SourateCourante sourateCourante;
+
+   Sourate sourate;
+  
+   String numero;
+
+  
+   int numofindex;
+
+
   // Verset _selectedverset;
   bool disabledDown = true;
   MyPopupItem _select = listitem[0]; 
@@ -125,16 +132,16 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   // onChangeDropdownItemVerset(_value) {
   //   setState(() {
   //     _selectedverset = _value;
-  //   });
+  //   });listsourateCourante
   // }
 
   @override
   Widget build(BuildContext context) {
     if(listsourateCourante==null){
-      listsourateCourante= List<SourateCourante>();
+      listsourateCourante= <SourateCourante>[];
       updateListView();
       sourate=fatiya;
-      numero=mesSourates[0].numero;
+      numero=mesSourates[0].getNumero();
       numofindex=0;
 
     }
@@ -143,8 +150,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
    // print('la longeur de la liste est ${listsourateCourante.length}');
    if(listsourateCourante.length>0)
   {  sourateCourante=listsourateCourante[listsourateCourante.length-1];
-    sourate=mesSourates[sourateCourante.getNumsourate()-1].sourate;
-    numero=mesSourates[sourateCourante.getNumsourate()-1].numero;
+    sourate=mesSourates[sourateCourante.getNumsourate()-1].getSourate();
+    numero=mesSourates[sourateCourante.getNumsourate()-1].getNumero();
     numofindex=sourateCourante.getNumverset();
   }
     return Scaffold(
@@ -184,10 +191,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 icon: Icon(Icons.book),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(
-                        builder: (context) => ReadChapitre(title:' Invocations et Citadelle du Musulman',chap: 'assets/invocations/citadelle.pdf')
-                        //Lecture()
-                        ));
+                      MaterialPageRoute(builder: (context) => ReadChapitre(title:'La Citadelle du Musulman',chap:'assets/invocations/citadelle.pdf',)));
                 }),
             PopupMenuButton<MyPopupItem>(
                 elevation: 0,

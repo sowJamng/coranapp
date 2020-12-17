@@ -14,6 +14,7 @@ import 'package:share/share.dart';
 import 'dart:async';
 import 'package:intl/date_symbol_data_local.dart' as intl_local_date_data;
 
+//116 and 122
 typedef void OnError(Exception exception);
 enum PlayerState { stopped, playing, paused }
 
@@ -21,7 +22,7 @@ class ChatScreen extends StatefulWidget {
   final Sourate sourate;
   final String numero;
   final numofindex;
-  ChatScreen({this.sourate, this.numero, this.numofindex});
+  ChatScreen({this.sourate, this.numero,this.numofindex});
 
   @override
   _ChatScreenState createState() => _ChatScreenState();
@@ -35,49 +36,50 @@ class _ChatScreenState extends State<ChatScreen> {
   final ItemPositionsListener itemPositionsListener =
       ItemPositionsListener.create();
   static var posi;
-  List<DropdownMenuItem<Verset>> _dropdownmenuItems;
+   List<DropdownMenuItem<Verset>> _dropdownmenuItems;
   DatabaseHelper helper = DatabaseHelper();
   DatabaseHelperSourate helpersourate = DatabaseHelperSourate();
-  Allfavories favorie;
-  Verset _selectedverset;
+   Allfavories favorie;
+   Verset _selectedverset;
   int selectedIndex = 0;
   Icon search = Icon(Icons.search);
   bool _searching = false;
   bool isplay = false;
-  Widget titre;
-  String txt;
-  double _initheight;
-  double _height;
-  Duration duration;
-  Duration position;
-  AudioPlayer audioPlayer;
-  String localFilePath;
+   Widget titre;
+   String txt;
+   double _initheight;
+   double _height;
+   Duration duration;
+   Duration position;
+   AudioPlayer audioPlayer;
+   String localFilePath;
   PlayerState playerState = PlayerState.stopped;
-  List<Verset> versetsearch;
-  List<DropdownMenuItem<Lecteur>> _dropdownmenuItemsl;
-  Lecteur _selectedlecteur;
-  List<Verset> mesversets;
+   List<Verset> versetsearch;
+   List<DropdownMenuItem<Lecteur>> _dropdownmenuItemsl;
+   Lecteur _selectedlecteur;
+   List<Verset> mesversets;
   ScrollController controller = ScrollController();
   String kurl = "";
   get isPlaying => playerState == PlayerState.playing;
   get isPaused => playerState == PlayerState.paused;
-  get durationText =>
-      duration != null ? duration.toString().split('.').first : '';
-  get positionText =>
-      position != null ? position.toString().split('.').first : '';
-  Duration vposition = new Duration(hours: 00, minutes: 00, seconds: 04);
-  get positionverset => "00:00:04";
-  StreamSubscription _positionSubscription;
-  StreamSubscription _audioPlayerStateSubscription;
+  // get durationText =>
+  //     duration != null ? duration.toString().split('.').first : '';
+  // get positionText =>
+  //     position != null ? position.toString().split('.').first : '';
+
+   StreamSubscription _positionSubscription;
+   StreamSubscription _audioPlayerStateSubscription;
   MyPopupItem _select = listitemsurate[0];
   Icon favori = Icon(Icons.favorite);
   Icon addfavori = Icon(Icons.favorite_border);
 
   List<DropdownMenuItem<Verset>> buildDropdownItem(List versets) {
-    List<DropdownMenuItem<Verset>> items = List();
-    for (Verset verset in versets) {
+    List<DropdownMenuItem<Verset>> items = [];
+    versets.forEach((verset) {
       items.add(DropdownMenuItem(value: verset, child: Text('${verset.numv}')));
-    }
+    });
+      
+    
     return items;
   }
 
@@ -92,11 +94,11 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   List<DropdownMenuItem<Lecteur>> buildDropdownIteml(List lecteurs) {
-    List<DropdownMenuItem<Lecteur>> items = List();
-    for (Lecteur lecteur in lecteurs) {
+    List<DropdownMenuItem<Lecteur>> items = [];
+    lecteurs.forEach((lecteur) {
       items.add(DropdownMenuItem(
           value: lecteur, child: Text(lecteur.prenom + ' ' + lecteur.nom)));
-    }
+    });
     return items;
   }
 
@@ -151,11 +153,7 @@ class _ChatScreenState extends State<ChatScreen> {
     var formatter = new DateFormat("yyyy-MM-dd'T'HH:mm:ss", 'en');
     DateTime now = new DateTime.now();
     String nowFormatted = formatter.format(now);
-    SourateCourante sourat = new SourateCourante();
-    sourat.setDate(nowFormatted);
-    sourat.setNumsourate(widget.sourate.getNumero());
-    sourat.setOntap(0);
-    sourat.setNumverset(posi);
+    SourateCourante sourat = new SourateCourante(nowFormatted,widget.sourate.getNumero(),0,posi);
     await helpersourate.deleteAll();
     await helpersourate.insertSourate(sourat);
   }
@@ -165,6 +163,8 @@ class _ChatScreenState extends State<ChatScreen> {
     _positionSubscription.cancel();
     _audioPlayerStateSubscription.cancel();
     audioPlayer.stop();
+    // helper.close();
+    // helpersourate.close();
     super.dispose();
   }
 
@@ -200,25 +200,25 @@ class _ChatScreenState extends State<ChatScreen> {
     });
   }
 
-  Future playautomat(int index) async {
-    Verset verset = versetsearch[index];
-    String vr = 'https://everyayah.com/data/' +
-        Parametres.lecteur.ayabyaya +
-        widget.numero +
-        verset.numero +
-        '.mp3';
-    await audioPlayer.play(vr);
-    if ((position = null)) {
-      verset = versetsearch[index + 1];
-      itemScrollController.jumpTo(index: index + 1);
-      vr = 'https://everyayah.com/data/' +
-          Parametres.lecteur.ayabyaya +
-          widget.numero +
-          verset.numero +
-          '.mp3';
-      await audioPlayer.play(vr);
-    }
-  }
+  // Future playautomat(int index) async {
+  //   Verset verset = versetsearch[index];
+  //   String vr = 'https://everyayah.com/data/' +
+  //       Parametres.lecteur.ayabyaya +
+  //       widget.numero +
+  //       verset.numero +
+  //       '.mp3';
+  //   await audioPlayer.play(vr);
+  //   if ((position = null)) {
+  //     verset = versetsearch[index + 1];
+  //     itemScrollController.jumpTo(index: index + 1);
+  //     vr = 'https://everyayah.com/data/' +
+  //         Parametres.lecteur.ayabyaya +
+  //         widget.numero +
+  //         verset.numero +
+  //         '.mp3';
+  //     await audioPlayer.play(vr);
+  //   }
+  // }
   // Future _playLocal() async {
   //   await audioPlayer.play(localFilePath, isLocal: true);
   //   setState(() => playerState = PlayerState.playing);
@@ -268,15 +268,15 @@ class _ChatScreenState extends State<ChatScreen> {
     DateTime now = new DateTime.now();
     String nowFormatted = formatter.format(now);
     Allfavories favor = new Allfavories();
-    //https://sqliteonline.com/
-    //  favor.setSourate(widget.sourate);
     favor.setDate(nowFormatted);
-    favor.setVarabe(widget.sourate.versets[index].arabe);
-    favor.setVwolof(widget.sourate.versets[index].wolof);
-    favor.setNumverset(widget.sourate.versets[index].numv);
-    favor.setNomsourate(widget.sourate.nom);
+    favor.setVarabe(widget.sourate.versets[index].getArabe());
+    favor.setVwolof(widget.sourate.versets[index].getWolof());
+    favor.setNumverset(widget.sourate.versets[index].getNumv()) ;
+    favor.setNomsourate(widget.sourate.getNom()) ;
     favor.setNumsourate(widget.sourate.getNumero());
     favor.setOntap(0);
+    //https://sqliteonline.com/
+    //  favor.setSourate(widget.sourate);
     // mes cours videos https://web.microsoftstream.com/group/2636dad7-18bb-4361-a790-be5309f4819b?view=videos
     //  favor.setVerset(widget.sourate.versets[index]);
     //favorie.date=nowFormatted;
@@ -497,66 +497,7 @@ class _ChatScreenState extends State<ChatScreen> {
                                 SizedBox(height: 7.0),
                                 //  if(((widget.sourate==baqara)&&((verset.numv==26)||(verset.numv==44)||(verset.numv==60)||(verset.numv==75)||(verset.numv==95)||(verset.numv==106)||(verset.numv==124)||(verset.numv==142)||(verset.numv==158)||(verset.numv==177)||(verset.numv==189)||(verset.numv==203)||(verset.numv==219)||(verset.numv==233)||(verset.numv==243)||(verset.numv==253)||(verset.numv==263)||(verset.numv==272)||(verset.numv==283)))||
                                 // ((widget.sourate==imran)&&((verset.numv==15)||(verset.numv==33)||(verset.numv==52)||(verset.numv==75)||(verset.numv==93)||(verset.numv==113)||(verset.numv==133)||(verset.numv==153)||(verset.numv==171)||(verset.numv==186)))||
-                                // ((widget.sourate==nisa)&&((verset.numv==12)||(verset.numv==24)||(verset.numv==36)||(verset.numv==58)||(verset.numv==74)||(verset.numv==88)||(verset.numv==100)||(verset.numv==114)||(verset.numv==135)||(verset.numv==148)||(verset.numv==163)))||
-                                // ((widget.sourate==maIda)&&((verset.numv==12)||(verset.numv==27)||(verset.numv==41)||(verset.numv==51)||(verset.numv==67)||(verset.numv==82)||(verset.numv==97)||(verset.numv==109)))||
-                                // ((widget.sourate==anam)&&((verset.numv==13)||(verset.numv==36)||(verset.numv==59)||(verset.numv==74)||(verset.numv==95)||(verset.numv==111)||(verset.numv==127)||(verset.numv==141)||(verset.numv==151)))||
-                                // ((widget.sourate==araf)&&((verset.numv==31)||(verset.numv==47)||(verset.numv==65)||(verset.numv==88)||(verset.numv==117)||(verset.numv==142)||(verset.numv==142)||(verset.numv==156)||(verset.numv==171)||(verset.numv==189)))||
-                                // ((widget.sourate==anfal)&&((verset.numv==22)||(verset.numv==41)||(verset.numv==61)))||
-                                // ((widget.sourate==tawbah)&&((verset.numv==19)||(verset.numv==34)||(verset.numv==46)||(verset.numv==60)||(verset.numv==75)||(verset.numv==93)||(verset.numv==111)||(verset.numv==122)))||
-                                // ((widget.sourate==yunus)&&((verset.numv==11)||(verset.numv==26)||(verset.numv==53)||(verset.numv==71)||(verset.numv==90)))||
-                                // ((widget.sourate==hud)&&((verset.numv==6)||(verset.numv==24)||(verset.numv==41)||(verset.numv==61)||(verset.numv==84)||(verset.numv==108)))||
-                                // ((widget.sourate==yussuf)&&((verset.numv==7)||(verset.numv==30)||(verset.numv==53)||(verset.numv==77)||(verset.numv==101)))||
-                                // ((widget.sourate==arrad)&&((verset.numv==5)||(verset.numv==5)||(verset.numv==19)||(verset.numv==35)))||
-                                // ((widget.sourate==ibrahim)&&((verset.numv==10)||(verset.numv==28)))||
-                                // ((widget.sourate==alhijr)&&(verset.numv==49))||
-                                // ((widget.sourate==annahl)&&((verset.numv==30)||(verset.numv==51)||(verset.numv==75)||(verset.numv==90)||(verset.numv==111)))||
-                                // ((widget.sourate==alisra)&&((verset.numv==23)||(verset.numv==50)||(verset.numv==70)||(verset.numv==99)))||
-                                // ((widget.sourate==alkahf)&&((verset.numv==32)||(verset.numv==51)||(verset.numv==75)||(verset.numv==99)||(verset.numv==17)))||
-                                // ((widget.sourate==maryam)&&((verset.numv==22)||(verset.numv==59)))||
-                                // ((widget.sourate==taha)&&((verset.numv==55)||(verset.numv==83)||(verset.numv==111)))||
-                                // ((widget.sourate==alanbiya)&&((verset.numv==29)||(verset.numv==51)||(verset.numv==83)))||
-                                // ((widget.sourate==alhadjj)&&((verset.numv==19)||(verset.numv==38)||(verset.numv==60)||(verset.numv==60)))||
-                                // ((widget.sourate==muminun)&&((verset.numv==36)||(verset.numv==75)))||
-                                // ((widget.sourate==annur)&&((verset.numv==21)||(verset.numv==35)||(verset.numv==53)))||
-                                // ((widget.sourate==furqan)&&((verset.numv==21)||(verset.numv==53)))||
-                                // ((widget.sourate==ashshura)&&((verset.numv==52)||(verset.numv==111)||(verset.numv==181)))||
-                                // ((widget.sourate==annaml)&&((verset.numv==27)||(verset.numv==56)||(verset.numv==82)))||
-                                // ((widget.sourate==alqasas)&&((verset.numv==12)||(verset.numv==29)||(verset.numv==51)||(verset.numv==76)))||
-                                // ((widget.sourate==ankabut)&&((verset.numv==26)||(verset.numv==46)))||
-                                // ((widget.sourate==arum)&&((verset.numv==31)||(verset.numv==54)))||
-                                // ((widget.sourate==luqman)&&((verset.numv==22)))||
-                                // ((widget.sourate==asajdah)&&((verset.numv==11)))||
-                                // ((widget.sourate==alhazab)&&((verset.numv==18)||(verset.numv==31)||(verset.numv==51)||(verset.numv==60)))||
-                                // ((widget.sourate==saba)&&((verset.numv==10)||(verset.numv==24)||(verset.numv==46)))||
-                                // ((widget.sourate==fatir)&&((verset.numv==15)||(verset.numv==41)||(verset.numv==41)))||
-                                // ((widget.sourate==yassin)&&((verset.numv==28)||(verset.numv==60)))||
-                                // ((widget.sourate==assafat)&&((verset.numv==22)||(verset.numv==83)||(verset.numv==145)))||
-                                // ((widget.sourate==sad)&&((verset.numv==21)||(verset.numv==52)))||
-                                // ((widget.sourate==azzumar)&&((verset.numv==8)||(verset.numv==32)||(verset.numv==53)))||
-                                // ((widget.sourate==ghafir)&&((verset.numv==21)||(verset.numv==41)||(verset.numv==66)))||
-                                // ((widget.sourate==fussila)&&((verset.numv==9)||(verset.numv==25)||(verset.numv==47)))||
-                                // ((widget.sourate==ashshura)&&((verset.numv==13)||(verset.numv==27)||(verset.numv==51)))||
-                                // ((widget.sourate==azukhruf)&&((verset.numv==24)||(verset.numv==57)))||
-                                // ((widget.sourate==addukhan)&&(verset.numv==17))||
-                                // ((widget.sourate==aljathiya)&&(verset.numv==12))||
-                                // ((widget.sourate==alahqaf)&&(verset.numv==21))||
-                                // ((widget.sourate==mouhamed)&&((verset.numv==10)||(verset.numv==33)))||
-                                // ((widget.sourate==alfath)&&(verset.numv==18))||
-                                // ((widget.sourate==alhujurat)&&(verset.numv==14))||
-                                // ((widget.sourate==qaf)&&(verset.numv==27))||
-                                // ((widget.sourate==adhariyat)&&(verset.numv==31))||
-                                // ((widget.sourate==attur)&&(verset.numv==24))||
-                                // ((widget.sourate==annajm)&&(verset.numv==26))||
-                                // ((widget.sourate==alqamar)&&(verset.numv==9))||
-                                // ((widget.sourate==alwaqiah)&&(verset.numv==75))||
-                                // ((widget.sourate==alhadid)&&(verset.numv==16))||
-                                // ((widget.sourate==almujadila)&&(verset.numv==14))||
-                                // ((widget.sourate==alhashr)&&(verset.numv==11))||
-                                // ((widget.sourate==almumtaHana)&&(verset.numv==7))||
-                                // ((widget.sourate==almunafiqun)&&(verset.numv==4))||
-                                // ((widget.sourate==almarij)&&(verset.numv==19))||
-                                // ((widget.sourate==almuzzammil)&&(verset.numv==20))||
-                                // ((widget.sourate==aladiyat)&&(verset.numv==9)))
+                               
                                 if (Sujod.withStart(
                                     widget.sourate, verset.numv))
                                   Align(
@@ -739,12 +680,12 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 
-  int comparePosition() {
-    if ((position != null) && (position.inSeconds <= 04)) {
-      return 0;
-    }
-    return 1;
-  }
+  // int comparePosition() {
+  //   if ((position != null) && (position.inSeconds <= 04)) {
+  //     return 0;
+  //   }
+  //   return 1;
+  // }
 
   void share(
       BuildContext context, Verset verset, Sourate sourate, final numero) {
