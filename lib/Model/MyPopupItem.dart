@@ -14,21 +14,21 @@ List<MyPopupItem> listitemsurate = <MyPopupItem>[
    MyPopupItem(listTile: ListTile(
         leading: Icon(Icons.zoom_in,color: Colors.white,),
         title: Text("Augmenter la taille",
-            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 13.0,color: Colors.white)),
+            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14.0,color: Colors.white)),
             
         //onTap: (){}
   ),),
   MyPopupItem(listTile: ListTile(
         leading: Icon(Icons.zoom_out,color: Colors.white,),
         title: Text("Diminuer la taille la taille",
-            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12.0,color: Colors.white)),
+            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 13.0,color: Colors.white)),
             
         //onTap: (){}
   ),),
    MyPopupItem(listTile: ListTile(
         leading: Icon(Icons.settings_backup_restore,color: Colors.white,),
         title: Text("Réinitialiser la taille",
-            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 12.0,color: Colors.white)),
+            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 13.0,color: Colors.white)),
             
         //onTap: (){}
   ),),
