@@ -3,7 +3,7 @@ class Lecteur {
   String prenom;
   String surname;
   String ayabyaya;
-  Lecteur({this.nom,this.prenom,this.surname,this.ayabyaya});
+  Lecteur({this.nom, this.prenom,this.surname,this.ayabyaya});
 
   static List<Lecteur> meslecteurs=[
     saad,abubakr,ajmi,jibel,maher,matroud,minshawi,salah,soudais,saoud,qassim

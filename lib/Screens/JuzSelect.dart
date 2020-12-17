@@ -1,5 +1,6 @@
 import 'package:audioplayer/audioplayer.dart';
 import 'package:coran/Model/Alljiza.dart';
+
 import 'package:coran/Model/Allsourate.dart';
 import 'package:coran/Model/MesSourates.dart';
 import 'package:coran/Model/MyPopupItem.dart';
@@ -17,7 +18,7 @@ enum PlayerState { stopped, playing, paused }
 class JusSelect extends StatefulWidget {
   final Ajiza ajiza;
   final int numeroaya;
-  JusSelect({this.ajiza, this.numeroaya});
+  JusSelect({ this.ajiza,  this.numeroaya});
 
   @override
   _JusSelectState createState() => _JusSelectState();
@@ -30,37 +31,37 @@ class _JusSelectState extends State<JusSelect> {
   /// Listener that reports the position of items when the list is scrolled.
   final ItemPositionsListener itemPositionsListener =
       ItemPositionsListener.create();
-  String txt;
-  double _height;
-  double _initheight;
-  Verset _selectedverset;
+   String txt;
+   double _height;
+   double _initheight;
+   Verset _selectedverset;
   bool _searching = false;
   bool isplay = false;
-  Duration duration;
-  Duration position;
-  AudioPlayer audioPlayer;
-  List<DropdownMenuItem<Verset>> _dropdownmenuItems;
-  String localFilePath;
+   Duration duration;
+   Duration position;
+   AudioPlayer audioPlayer;
+   List<DropdownMenuItem<Verset>> _dropdownmenuItems;
+   String localFilePath;
   PlayerState playerState = PlayerState.stopped;
-  List<Verset> mesversets;
+   List<Verset> mesversets;
   ScrollController controller = ScrollController();
   String kurl = "";
   get isPlaying => playerState == PlayerState.playing;
   get isPaused => playerState == PlayerState.paused;
-  get durationText =>
-      duration != null ? duration.toString().split('.').first : '';
-  get positionText =>
-      position != null ? position.toString().split('.').first : '';
+  // get durationText =>
+  //     duration != null ? duration.toString().split('.').first : '';
+  // get positionText =>
+  //     position != null ? position.toString().split('.').first : '';
   Duration vposition = new Duration(hours: 00, minutes: 00, seconds: 04);
   get positionverset => "00:00:04";
-  StreamSubscription _positionSubscription;
-  StreamSubscription _audioPlayerStateSubscription;
-  Widget titre;
+   StreamSubscription _positionSubscription;
+   StreamSubscription _audioPlayerStateSubscription;
+   Widget titre;
   Icon search = Icon(Icons.search);
-  List<Verset> versetsearch;
+   List<Verset> versetsearch;
   MyPopupItem _select = listitemsurate[0];
   List<DropdownMenuItem<Verset>> buildDropdownItem(List versets) {
-    List<DropdownMenuItem<Verset>> items = List();
+    List<DropdownMenuItem<Verset>> items = [];
     versets.forEach((verset) {
       items.add(DropdownMenuItem(value: verset, child: Text('${verset.numv}')));
     });
@@ -121,26 +122,26 @@ class _JusSelectState extends State<JusSelect> {
     });
   }
 
-  Future playautomat(int index) async {
-    Verset verset = versetsearch[index];
-    String vr = 'https://everyayah.com/data/' +
-        Parametres.lecteur.ayabyaya +
-        mesSourates[widget.ajiza.sourate.numero - 1].numero +
-        verset.numero +
-        '.mp3';
-    print(vr);
-    await audioPlayer.play(vr);
-    if ((position = null)) {
-      verset = versetsearch[index + 1];
-      itemScrollController.jumpTo(index: index + 1);
-      vr = 'https://everyayah.com/data/' +
-          Parametres.lecteur.ayabyaya +
-          mesSourates[widget.ajiza.sourate.numero - 1].numero +
-          verset.numero +
-          '.mp3';
-      await audioPlayer.play(vr);
-    }
-  }
+  // Future playautomat(int index) async {
+  //   Verset verset = versetsearch[index];
+  //   String vr = 'https://everyayah.com/data/' +
+  //       Parametres.lecteur.ayabyaya +
+  //       mesSourates[widget.ajiza.sourate.numero - 1].numero +
+  //       verset.numero +
+  //       '.mp3';
+  //   print(vr);
+  //   await audioPlayer.play(vr);
+  //   if ((position == null)) {
+  //     verset = versetsearch[index + 1];
+  //     itemScrollController.jumpTo(index: index + 1);
+  //     vr = 'https://everyayah.com/data/' +
+  //         Parametres.lecteur.ayabyaya +
+  //         mesSourates[widget.ajiza.sourate.numero - 1].numero +
+  //         verset.numero +
+  //         '.mp3';
+  //     await audioPlayer.play(vr);
+  //   }
+  // }
 
   Future stop(String url) async {
     await audioPlayer.stop();

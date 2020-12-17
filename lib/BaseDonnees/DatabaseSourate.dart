@@ -3,14 +3,14 @@ import 'package:sqflite/sqflite.dart';
 import 'dart:io';
 
 class SourateCourante {
-  int  id;
-  int numsourate;
-  int ontap=0;
-  String date;
-  int numverset;
+   int  id;
+   int numsourate;
+   int ontap=0;
+   String date;
+   int numverset;
   
-  SourateCourante({this.date,this.numsourate,this.ontap,this.numverset});
-  SourateCourante.withId({this.id,this.date,this.numsourate,this.ontap,this.numverset});
+  SourateCourante(this.date,this.numsourate,this.ontap, this.numverset);
+  SourateCourante.withId({this.id, this.date,this.numsourate,this.ontap,this.numverset});
 
   int getId() => this.id;
   int getNumsourate() => this.numsourate;
@@ -38,7 +38,8 @@ class SourateCourante {
      return map;   
    }
 //fonction pour extraite les donnees mappes pour les avoir en objet souratees a partir des objet map dynamic car on a dif types
-   SourateCourante.fromMapObjet(Map<String,dynamic> map){
+   
+     SourateCourante.fromMapObjet(Map<String,dynamic> map){
      //extraction
      this.id=map['id'];
      this.date=map['date'];
@@ -47,13 +48,14 @@ class SourateCourante {
      this.numverset=map['numverset'];
      
    }
+   
 }
 
 //reference 
 //https://www.w3resource.com/sqlite-exercises/sqlite-subquery-exercise-14.php
 class DatabaseHelperSourate {
-  static DatabaseHelperSourate _databaseHelper;  //on cree une seule instance globale
-  static Database _database; // un seul singletron db
+  static  DatabaseHelperSourate _databaseHelper;  //on cree une seule instance globale
+  static  Database _database; // un seul singletron db
   DatabaseHelperSourate._createInstance(); //constructeur nomme pour creer une instance de dbHelper
   String souraTable ='sour_table';
   String  colId ='id';
@@ -101,7 +103,7 @@ class DatabaseHelperSourate {
   Future<List<SourateCourante >> getSouratesList() async{
     var souratesMapList=await getSouratesMapList(); //get Map<LIST> from the database
     int count=souratesMapList.length; //count the number of map entries in db table
-    List<SourateCourante> souratelist=List<SourateCourante>();
+    List<SourateCourante> souratelist=<SourateCourante>[];
     for(int i=0;i<count;i++){
 
       souratelist.add( SourateCourante.fromMapObjet(souratesMapList[i]));
@@ -119,7 +121,7 @@ class DatabaseHelperSourate {
     print('call methode getsourate');
     var souratesMapList=await getSourateCouranteMapList(); //get Map<LIST> from the database
     int count=souratesMapList.length; //count the number of map entries in db table
-    List<SourateCourante> souratelist=List<SourateCourante>();
+    List<SourateCourante> souratelist=<SourateCourante>[];
     for(int i=0;i<count;i++){
       souratelist.add( SourateCourante.fromMapObjet(souratesMapList[i]));
     }
@@ -134,7 +136,7 @@ class DatabaseHelperSourate {
   Future<List<SourateCourante >> getSouratesFavori() async{
     var souratesMapList=await getSourateFavoriMapList(); //get Map<LIST> from the database
     int count=souratesMapList.length; //count the number of map entries in db table
-    List<SourateCourante> souratelist=List<SourateCourante>();
+    List<SourateCourante> souratelist=<SourateCourante>[];
     for(int i=0;i<count;i++){
       souratelist.add( SourateCourante.fromMapObjet(souratesMapList[i]));
     }
@@ -186,5 +188,9 @@ Future<bool> exist(int nums,int numv) async{
         List<Map<String, dynamic>>  x=await db.rawQuery('SELECT COUNT (*) FROM $souraTable');
         int result=Sqflite.firstIntValue(x);
         return result;
+  }
+   Future close() async{
+    var dbClient=await database;
+    dbClient.close();
   }
 }

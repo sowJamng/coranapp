@@ -9,11 +9,11 @@ Sourate sourate;
 String nbaya;
 String lieu;
 
- MesSourates({this.numero,this.nbaya, this.sourate,this.lieu});
-// String getNumero()=>this.numero;
-// String getLieu()=>this.lieu;
-// String getNbaya()=>this.nbaya;
-// Sourate getSourate()=>this.sourate;
+ MesSourates({ this.numero, this.nbaya,  this.sourate, this.lieu});
+String getNumero()=>this.numero;
+String getLieu()=>this.lieu;
+String getNbaya()=>this.nbaya;
+Sourate getSourate()=>this.sourate;
 
 
 // factory MesSourates.fromJson(Map<String,dynamic> map){
@@ -411,7 +411,8 @@ lieu: 'Medine'
 MesSourates(
 numero: "/060",
 nbaya: 'Medine 13 Ayat',
-sourate: almumtaHana
+sourate: almumtaHana,
+lieu:'Medine'
 ),
 MesSourates(
   numero: "/061",
@@ -560,7 +561,8 @@ sourate: inshiqaq,
 MesSourates(
 numero: "/085",
 nbaya: 'Medine 22 Ayat',
-sourate: alburuj
+sourate: alburuj,
+lieu:'Mecque'
 ),
 MesSourates(
 numero: "/086",
@@ -709,7 +711,8 @@ sourate: alkafirun,
 MesSourates(
 numero: "/110",
 nbaya: 'Medine 3 Ayat',
-sourate: anasr
+sourate: anasr,
+lieu:'Medine'
 ),
 MesSourates(
 numero: "/111",

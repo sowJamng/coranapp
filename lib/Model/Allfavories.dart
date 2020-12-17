@@ -1,16 +1,15 @@
-import 'dart:core';
-
 class Allfavories {
-  int  id;
-  int numsourate;
-  int ontap=0;
-  String date;
-  String varabe;
-  String vwolof;
-  int numverset;
-  String nomsourate;
+   int  id;
+   int numsourate;
+   int ontap=0;
+   String date;
+   String varabe;
+   String vwolof;
+   int numverset;
+   String nomsourate;
+ 
   Allfavories({this.date,this.varabe,this.vwolof,this.numverset,this.nomsourate,this.numsourate,this.ontap});
-  Allfavories.withId({this.id,this.date,this.varabe,this.vwolof,this.numverset,this.nomsourate,this.numsourate,this.ontap});
+  Allfavories.withId({ this.id, this.date, this.varabe, this.vwolof, this.numverset, this.nomsourate, this.numsourate, this.ontap});
 
   int getId() => this.id;
   int getNumsourate() => this.numsourate;
@@ -49,7 +48,7 @@ class Allfavories {
     
    }
 //fonction pour extraite les donnees mappes pour les avoir en objet Favories a partir des objet map dynamic car on a dif types
-   Allfavories.fromMapObjet(Map<String,dynamic> map){
+   Allfavories.fromMapObject(Map<String,dynamic> map){
      //extraction
      this.id=map['id'];
      this.date=map['date'];

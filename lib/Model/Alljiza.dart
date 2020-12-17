@@ -1,10 +1,11 @@
 import 'Allsourate.dart';
+
 class Ajiza {
   Sourate sourate;
   int numeroaya;
   String beginaya;
   List<Verset> beginverset;
-  Ajiza({this.sourate,this.numeroaya,this.beginaya,this.beginverset});
+  Ajiza({this.sourate,this.numeroaya, this.beginaya,this.beginverset});
   Sourate getSourate()=>this.sourate;
   int getNumeroaya()=> this.numeroaya; 
   String getBeginaya()=>this.beginaya;
@@ -12,21 +13,22 @@ class Ajiza {
 }
           
 List<Verset> recupererJuz(Sourate sourate , int numero){
-Sourate souraterecup = new Sourate(nom:'',nbaya:'',audio:'',nomarabe:'',versets: new List<Verset>());
-  sourate.versets.forEach((verset) {
-    souraterecup.versets.add(verset);
-  });
-      return souraterecup.versets;
+// Sourate souraterecup = new Sourate(nom:'',nbaya:'',audio:'',nomarabe:'',versets: new List<Verset>());
+// for(var i= numero;i<sourate.versets.length;i++){
+//     souraterecup.versets.add(sourate.versets[i]);
+//}
+return List.from(sourate.getVersets().getRange(numero,sourate.getVersets().length).toList());
+      // return souraterecup.versets;
+
 }
 
 
-Ajiza fatiha 
-=   new Ajiza(sourate:fatiya,numeroaya:1,beginaya:"بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",  beginverset: recupererJuz(fatiya, 0));
+Ajiza fatiha= new Ajiza(sourate:fatiya,numeroaya:1,beginaya:"بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",  beginverset: recupererJuz(fatiya, 0));
 Ajiza baquara26= new Ajiza(sourate:baqara,numeroaya:26,beginaya:'إِنَّ اللَّهَ لاَ يَسْتَحْيِي أَن',  beginverset: recupererJuz(baqara, 25));
 Ajiza baquara44= new Ajiza(sourate:baqara,numeroaya:44,beginaya:'أَتَأْمُرُونَ النَّاسَ بِالْبِرِّ',  beginverset: recupererJuz(baqara, 43));
-Ajiza baquara60= new Ajiza(sourate:baqara,numeroaya:60,beginaya:'وَإِذِ اسْتَسْقَى مُوسَى لِقَوْمِهِ',beginverset: recupererJuz(baqara, 59));
-Ajiza baquara75= new Ajiza(sourate:baqara,numeroaya:75,beginaya:'أَفَتَطْمَعُونَ أَن يُؤْمِنُواْ لَكُمْ',beginverset: recupererJuz(baqara, 74));
-Ajiza baquara92= new Ajiza(sourate:baqara,numeroaya:92,beginaya:'وَلَقَدْ جَاءكُم مُّوسَى',beginverset: recupererJuz(baqara, 91));
+Ajiza baquara60=  new Ajiza(sourate:baqara,numeroaya:60,beginaya:'وَإِذِ اسْتَسْقَى مُوسَى لِقَوْمِهِ',beginverset: recupererJuz(baqara, 59));
+Ajiza baquara75=  new Ajiza(sourate:baqara,numeroaya:75,beginaya:'أَفَتَطْمَعُونَ أَن يُؤْمِنُواْ لَكُمْ',beginverset: recupererJuz(baqara, 74));
+Ajiza baquara92=  new Ajiza(sourate:baqara,numeroaya:92,beginaya:'وَلَقَدْ جَاءكُم مُّوسَى',beginverset: recupererJuz(baqara, 91));
 Ajiza baquara106= new Ajiza(sourate:baqara,numeroaya:106,beginaya:'مَا نَنسَخْ مِنْ آيَةٍ أَوْ نُنسِهَا',beginverset: recupererJuz(baqara, 105));
 Ajiza baquara124= new Ajiza(sourate:baqara,numeroaya:124,beginaya:'وَإِذِ ابْتَلَى إِبْرَاهِيمَ رَبُّهُ',beginverset: recupererJuz(baqara, 123));
 Ajiza baquara142= new Ajiza(sourate:baqara,numeroaya:142,beginaya:'سَيَقُولُ السُّفَهَاء مِنَ النَّاسِ',beginverset: recupererJuz(baqara, 141));
