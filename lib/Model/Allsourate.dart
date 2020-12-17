@@ -158,7 +158,7 @@ Verset(numv:9,numero:'009',arabe:"يُخَادِعُونَ اللَّهَ وَا
   
   Verset(numv:15,numero:'015',arabe:"اللَّهُ يَسْتَهْزِئُ بِهِمْ وَيَمُدُّهُمْ فِي طُغْيَانِهِمْ يَعْمَهُونَ ",francais: " Allāhu Yastahzi'u Bihim Wa Yamudduhum Fī Ţughyānihim Ya`mahūna",wolof: "Yàllaa nga leen di yejji, di leen gën a yàggal ca seen mbeewte googu, ñuy deŋŋi-deŋŋi ak seen ngumbaag xol. "),
   
-  Verset(numv:16,numero:'016',arabe:"أُولَٰئِكَ الَّذِينَ اشْتَرَوُا الضَّلَالَةَ بِالْهُدَىٰ فَمَا رَبِحَت تِّجَارَتُهُمْ وَمَا كَانُوا مُهْتَدِينَ ",francais: " 'Ūlā'ika Al-Ladhīna Ashtaraw Ađ-Đalālata Bil-Hudá Famā Rabihat Tijāratuhum Wa Mā Kānū MuhtadīnaMathaluhum Kamathali Al-Ladhī Astawqada Nārāan Falammā 'Ađā'at Mā hawlahu Dhahaba Allāhu Binūrihim Wa Tarakahum Fī Žulumātin Lā Yubşirūna",wolof: " Seen niróole mi ngi demee ni ku taal taalamn, ba janeer ba leeraale la ko wër, Yàlla fay leer ga, bàyyi leen cig lëndëm ba gisatuñu dara. "),
+  Verset(numv:15,numero:'015',arabe:"أُولَٰئِكَ الَّذِينَ اشْتَرَوُا الضَّلَالَةَ بِالْهُدَىٰ فَمَا رَبِحَت تِّجَارَتُهُمْ وَمَا كَانُوا مُهْتَدِينَ ",francais: " 'Ūlā'ika Al-Ladhīna Ashtaraw Ađ-Đalālata Bil-Hudá Famā Rabihat Tijāratuhum Wa Mā Kānū MuhtadīnaMathaluhum Kamathali Al-Ladhī Astawqada Nārāan Falammā 'Ađā'at Mā hawlahu Dhahaba Allāhu Binūrihim Wa Tarakahum Fī Žulumātin Lā Yubşirūna",wolof: " Seen niróole mi ngi demee ni ku taal taalamn, ba janeer ba leeraale la ko wër, Yàlla fay leer ga, bàyyi leen cig lëndëm ba gisatuñu dara. "),
   
   Verset(numv:18,numero:'018',arabe:"صُمٌّ بُكْمٌ عُمْيٌ فَهُمْ لَا يَرْجِعُونَ ",francais: " Şummun Bukmun `Umyun Fahum Lā Yarji`ūna",wolof: "Dañoo tëx, luu, gumba, ba duñu mën a dellusi (cig njub). "),
   
