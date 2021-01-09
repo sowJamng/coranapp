@@ -3,12 +3,28 @@ dart:
   - stable
   - "2.10.3"
   - "2.9.3"
-  - "2.8.4"
+  - "2.8.4"  
   - "2.7.2"
-before_install:
-  - sudo apt-get -y install libc6
+addons: # installer des packages supplementaire sur le sys
+  apt:
+    packages:
+      - lib32stdc ++ 6
+install:
+  - git clone https://github.com/sowJamng/coran/coran.git -b stable 
+  - ./coran/bin/coran doctor #aulieu de pub get
+  - gem install coveralls-lcov # install coveralls-lcov pour installer les combinaison
 script:
-  - pub get --packages-dir
-  - pub run test
-  - pub run codecov --report-on=bin/ --no-html --verbose test/env_test.dart
-  - bash <(curl -s https://codecov.io/bash)
+  - ./coran/bin/coran test --coverage #generer un rapport de couverture de code
+  - ./coran/bin/coran test  
+after_success:
+  -coverallsalls-lcov coverage/lcov.info #pour envoyer le rapport de couverture de test
+cache:
+  repositories:
+    - $HOME/.pub-cache #pour indiquer a travis de mettre en cache le contenu du cache de dart par defaut pour que flutter puisse installer rapidement les dependences de lapp
+# before_install:
+#   - sudo apt-get -y install libc6
+# script:
+#   - pub get --packages-dir
+#   - pub run test
+#   - pub run codecov --report-on=bin/ --no-html --verbose test/env_test.dart
+#   - bash <(curl -s https://codecov.io/bash)
