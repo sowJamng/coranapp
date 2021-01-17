@@ -1,9 +1,9 @@
 import 'package:audioplayer/audioplayer.dart';
-import 'package:coran/Model/Alljiza.dart';
-import '../Model/Allsourate.dart' ;
-import 'package:coran/Model/MesSourates.dart';
-import 'package:coran/Model/MyPopupItem.dart';
-import 'package:coran/Screens/Parametres.dart';
+import 'package:coran/Model/Ajiza/Alljiza.dart';
+import '../../Model/sourates/Allsourate.dart' ;
+import 'package:coran/Model/sourates/MesSourates.dart';
+import 'package:coran/Model/Menu/MyPopupItem.dart';
+import 'package:coran/Screens/Parametres/Parametres.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

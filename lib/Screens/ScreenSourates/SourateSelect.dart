@@ -1,11 +1,11 @@
 import 'package:audioplayer/audioplayer.dart';
 import 'package:coran/BaseDonnees/DatabaseFavories.dart';
 import 'package:coran/BaseDonnees/DatabaseSourate.dart';
-import 'package:coran/Model/Allfavories.dart';
-import 'package:coran/Model/Allsourate.dart';
-import 'package:coran/Model/Lecteurs.dart';
-import 'package:coran/Model/MyPopupItem.dart';
-import 'package:coran/Screens/Parametres.dart';
+import 'package:coran/Model/favories/Allfavories.dart';
+import 'package:coran/Model/sourates/Allsourate.dart';
+import 'package:coran/Model/Lecteurs/Lecteurs.dart';
+import 'package:coran/Model/Menu/MyPopupItem.dart';
+import 'package:coran/Screens/Parametres/Parametres.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -141,11 +141,6 @@ class _ChatScreenState extends State<ChatScreen> {
           widget.numero +
           '.mp3';
     print(kurl);
-    // ChatScreen.sourateread=widget.sourate;
-    //Parametres.continuesourate=widget.sourate;
-    //Parametres.num=widget.numero;
-
-    //  _saveSourate();
   }
 
   void _saveSourate() async {
@@ -200,35 +195,6 @@ class _ChatScreenState extends State<ChatScreen> {
     });
   }
 
-  // Future playautomat(int index) async {
-  //   Verset verset = versetsearch[index];
-  //   String vr = 'https://everyayah.com/data/' +
-  //       Parametres.lecteur.ayabyaya +
-  //       widget.numero +
-  //       verset.numero +
-  //       '.mp3';
-  //   await audioPlayer.play(vr);
-  //   if ((position = null)) {
-  //     verset = versetsearch[index + 1];
-  //     itemScrollController.jumpTo(index: index + 1);
-  //     vr = 'https://everyayah.com/data/' +
-  //         Parametres.lecteur.ayabyaya +
-  //         widget.numero +
-  //         verset.numero +
-  //         '.mp3';
-  //     await audioPlayer.play(vr);
-  //   }
-  // }
-  // Future _playLocal() async {
-  //   await audioPlayer.play(localFilePath, isLocal: true);
-  //   setState(() => playerState = PlayerState.playing);
-  // }
-
-  // itemScrollController. scrollTo (
-  // indice :  150 ,
-  // durée :  Durée (secondes :  2 ),
-  // courbe :  courbes .easeInOutCubic);https://github.com/google/flutter.widgets/tree/master/packages/scrollable_positioned_list
-  //https://pub.dev/packages/scrollable_positioned_list#-example-tab-
   Future stop(String url) async {
     await audioPlayer.stop();
 
@@ -425,17 +391,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           child: Column(
             children: <Widget>[
-              //  if (duration != null)
-              //   Slider(
-              //   value: position?.inMilliseconds?.toDouble() ?? 0.0,
-              //   onChanged: (double value) {
-              //     return audioPlayer.seek((value / 1000).roundToDouble());
-              //   },
-              //   activeColor: Color(0xFF223645),
-              //   min: 0.0,
-              //   max: duration.inMilliseconds.toDouble()
-              //   ),
-              //if (position != null) _buildProgressView(),
+
               Expanded(
                 child: Container(
                   child: ClipRRect(
@@ -567,12 +523,6 @@ class _ChatScreenState extends State<ChatScreen> {
                                       fontSize: 16.0,
                                       color: Colors.green,
                                     ),
-                                    //     ),
-                                    // TextStyle(
-                                    //     fontWeight: FontWeight.w400,
-                                    //     fontSize: 17.0,
-                                    //     color: Colors.green,
-                                    //  ),
                                     overflow: TextOverflow.visible,
                                   ),
                                 if (Parametres.trans == true)
@@ -584,11 +534,6 @@ class _ChatScreenState extends State<ChatScreen> {
                                       fontSize: 16.0,
                                       color: Colors.deepPurpleAccent,
                                     ),
-                                    // style: TextStyle(
-                                    //     fontWeight: FontWeight.w600,
-                                    //     fontSize: 17.0,
-                                    //     color: Colors.deepPurpleAccent,//Parametres.fond? Colors.white70:Colors.black,//Colors.green,
-                                    //  ),
                                     overflow: TextOverflow.visible,
                                   ),
                                 SizedBox(height: 10.0),
@@ -603,15 +548,7 @@ class _ChatScreenState extends State<ChatScreen> {
                                         ), //isplay?Icon(Icons.pause_circle_outline,color:Colors.indigo):Icon(Icons.play_arrow,color: Colors.green,),
                                         onPressed: () {
                                           print(vr);
-                                          //isplay?pause():play(vr);
-                                          // setState(() {
-                                          //   if(isplay==true){
-                                          //         this.pause();
-                                          //   }
-                                          //   else{
-                                          //     playautomat(index);
-                                          //   }
-                                          // });
+                                    
                                           isPlaying
                                               ? stop(vr)
                                               : play(vr); //playautomat(index);
@@ -632,16 +569,6 @@ class _ChatScreenState extends State<ChatScreen> {
                                             _showSnackBar(context,
                                                 'Verset ${verset.numv} ajouté aux favories avec succés');
                                           });
-
-                                          // setState(() {
-                                          //   if(addfavori.icon==Icons.favorite_border)
-                                          //   {this.addfavori=Icon(Icons.favorite);
-                                          //   _save(index);
-                                          //    _showSnackBar(context, 'Verset ajouté aux favories avec succés');
-                                          //   }
-                                          //   else
-                                          //   this.addfavori= Icon(Icons.favorite_border);
-                                          // });
                                         }),
                                     Builder(
                                       builder: (BuildContext context) {
@@ -680,12 +607,6 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 
-  // int comparePosition() {
-  //   if ((position != null) && (position.inSeconds <= 04)) {
-  //     return 0;
-  //   }
-  //   return 1;
-  // }
 
   void share(
       BuildContext context, Verset verset, Sourate sourate, final numero) {

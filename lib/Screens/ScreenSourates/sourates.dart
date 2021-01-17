@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../Model/MesSourates.dart';
-import 'Parametres.dart';
+import '../../Model/sourates/MesSourates.dart';
+import '../Parametres/Parametres.dart';
 import 'SourateSelect.dart';
-import 'Home.dart';
+import '../Home/Home.dart';
 
 class Sourates extends StatefulWidget {
   static List<MesSourates> souratesdisplay = <MesSourates>[];

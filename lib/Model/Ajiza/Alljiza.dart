@@ -1,4 +1,4 @@
-import 'Allsourate.dart';
+import '../sourates/Allsourate.dart';
 
 class Ajiza {
   Sourate sourate;
@@ -13,12 +13,7 @@ class Ajiza {
 }
           
 List<Verset> recupererJuz(Sourate sourate , int numero){
-// Sourate souraterecup = new Sourate(nom:'',nbaya:'',audio:'',nomarabe:'',versets: new List<Verset>());
-// for(var i= numero;i<sourate.versets.length;i++){
-//     souraterecup.versets.add(sourate.versets[i]);
-//}
 return List.from(sourate.getVersets().getRange(numero,sourate.getVersets().length).toList());
-      // return souraterecup.versets;
 
 }
 

@@ -1,4 +1,4 @@
-import 'package:coran/Model/Allfavories.dart';
+import 'package:coran/Model/favories/Allfavories.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 import 'dart:io';

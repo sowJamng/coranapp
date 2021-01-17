@@ -1,12 +1,12 @@
 import 'package:coran/BaseDonnees/DatabaseFavories.dart';
-import 'package:coran/Model/Allfavories.dart';
-import 'package:coran/Model/MesSourates.dart';
-import 'package:coran/Screens/SourateSelect.dart';
+import 'package:coran/Model/favories/Allfavories.dart';
+import 'package:coran/Model/sourates/MesSourates.dart';
+import 'package:coran/Screens/Screensourates/SourateSelect.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sqflite/sqflite.dart';
-import 'Parametres.dart';
-import 'package:coran/Model/Allsourate.dart';
+import '../Parametres/Parametres.dart';
+import 'package:coran/Model/sourates/Allsourate.dart';
 
 class ListFavories extends StatefulWidget {
   @override
@@ -239,18 +239,6 @@ class _ListFavoriesState extends State<ListFavories> {
     await databaseHelper.updateFavori(favorie);
     updateListView();
   }
-
-  // void _showSnackBar(BuildContext context, String message) {
-  //   final snackbar = SnackBar(content: Text(message));
-  //   Scaffold.of(context).showSnackBar(snackbar);
-    
-  // }
-
-  // void navigateDetailFavorie(Allfavories favori, String title) async {
-  //   await Navigator.push(context, MaterialPageRoute(builder: (context) {
-  //     return ChatScreen();
-  //   }));
-  // }
 
   void updateListView() {
     final Future<Database> dbFuture = databaseHelper.initializeDatabase();

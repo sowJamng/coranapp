@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Readpdf.dart';
+import '../../Model/ReadPdf/Readpdf.dart';
 
 class Chapitres extends StatefulWidget {
   @override
@@ -10,27 +10,6 @@ class Chapitres extends StatefulWidget {
 class _ChapitresState extends State<Chapitres> {
   @override
   Widget build(BuildContext context) { 
-    
-    // return  WillPopScope(
-    //     onWillPop:(){
-    //     return showDialog(
-    //       context: context,
-    //       builder: (context)=>AlertDialog(
-    //         title:Text('Warning'),
-    //         content:Text('Etes vous sure de vouloir quitter'),
-    //         actions:<Widget>[
-    //           FlatButton(
-    //             onPressed: ()=>Navigator.of(context).pop(true),
-    //             child: Text('Oui'),
-    //             ),
-    //             FlatButton(
-    //             onPressed: ()=>Navigator.of(context).pop(false),
-    //             child: Text('Non'),
-    //            ),
-    //          ]
-    //       )
-    //     );
-    //     },
 
       return Scaffold(
             backgroundColor: Colors.white,

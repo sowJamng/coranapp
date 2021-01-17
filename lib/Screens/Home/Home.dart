@@ -1,19 +1,19 @@
 
 
 import 'package:coran/BaseDonnees/DatabaseSourate.dart';
-import 'package:coran/Model/Allsourate.dart';
-import 'package:coran/Model/MesAjiza.dart';
-import 'package:coran/Model/MesSourates.dart';
-import 'package:coran/Model/MyPopupItem.dart';
-import 'package:coran/Screens/Parametres.dart';
-import 'package:coran/Screens/RappelsIslam.dart';
-import 'package:coran/Screens/Readpdf.dart';
-import 'package:coran/Screens/sourates.dart';
+import 'package:coran/Model/sourates/Allsourate.dart';
+import 'package:coran/Model/Ajiza/MesAjiza.dart';
+import 'package:coran/Model/sourates/MesSourates.dart';
+import 'package:coran/Model/Menu/MyPopupItem.dart';
+import 'package:coran/Screens/Parametres/Parametres.dart';
+import 'package:coran/Screens/Rappelslam/RappelsIslam.dart';
+import 'package:coran/Model//ReadPdf/ReadPdf.dart';
+import 'package:coran/Screens/ScreenSourates/sourates.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
-import 'Ajiza.dart';
-import 'ListFavories.dart';
-import 'SourateSelect.dart';
+import '../ScreenJuz/Ajiza.dart';
+import '../ScreenFavories/ListFavories.dart';
+import '../ScreenSourates/SourateSelect.dart';
 
 class Home extends StatefulWidget {
   static bool search=false;
@@ -23,9 +23,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
  TabController _tabController;
-  // List<DropdownMenuItem<Sourate>> _dropdownmenuItems;
-  // List<DropdownMenuItem<Verset>> _dropdownmenuItemsv;
-  //Sourate _selectedsourate;
+
   DatabaseHelperSourate helpersourate=DatabaseHelperSourate();
   
    List<SourateCourante> listsourateCourante;
@@ -91,49 +89,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
   @override
   void initState() {
-    // _dropdownmenuItems = buildDropdownItem(sourates);
-    // _selectedsourate = _dropdownmenuItems[0].value;
-    // _dropdownmenuItemsv = buildDropdownItemv(_selectedsourate.versets);
-    // _selectedverset = _dropdownmenuItemsv[0].value;
      updateListView();
 
     super.initState();
     _tabController = new TabController(vsync: this, initialIndex: 1, length: 3);
   }
 
-  // List<DropdownMenuItem<Sourate>> buildDropdownItem(List sourates) {
-  //   List<DropdownMenuItem<Sourate>> items = List();
-  //   for (Sourate sourate in sourates) {
-  //     items.add(DropdownMenuItem(value: sourate, child: Text(sourate.nom)));
-  //   }
-
-  //   return items;
-  // }
-
-  // List<DropdownMenuItem<Verset>> buildDropdownItemv(List versets) {
-  //   List<DropdownMenuItem<Verset>> items = List();
-  //   for (Verset verset in versets) {
-  //     items.add(
-  //         DropdownMenuItem(value: verset, child: Text('${verset.numero}')));
-  //   }
-
-  //   return items;
-  // }
-
- 
-
-  // onChangeSourate(_value) {
-  //   setState(() {
-  //     _selectedsourate = _value;
-  //     disabledDown = false;
-  //   });
-  // }
-
-  // onChangeDropdownItemVerset(_value) {
-  //   setState(() {
-  //     _selectedverset = _value;
-  //   });listsourateCourante
-  // }
 
   @override
   Widget build(BuildContext context) {
