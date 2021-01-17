@@ -1,4 +1,4 @@
-import 'Lecteurs.dart';
+import '../Lecteurs/Lecteurs.dart';
 
 class Sourate {
   int numero;

@@ -1,9 +1,9 @@
-import 'package:coran/Model/MesAjiza.dart';
+import 'package:coran/Model/Ajiza/MesAjiza.dart';
 import 'package:flutter/material.dart';
-import 'Home.dart';
+import '../Home/Home.dart';
 import 'JuzSelect.dart';
-import 'Parametres.dart';
-//
+import '../Parametres/Parametres.dart';
+
 //import 'package:draggable_scrollbar/draggable_scrollbar.dart';
 
 class MyAjiza extends StatefulWidget {

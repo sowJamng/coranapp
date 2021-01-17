@@ -1,0 +1,3 @@
+service_name:travis-pro
+repo-token:${{secrets.CODECOV_TOKEN}}
+#lien configring travis ci and coveralls with flutter

@@ -13,11 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install dependencies
-      run: pub get
+      run: ./coran/bin/coran doctor #pub get
     - name: Run tests
-      run: pub run test
+      run: ./coran/bin/coran test #pub run test
     - name: Code Coverage
-      run: pub run test_coverage
+      run: ./coran/bin/coran test --coverage #pub run test_coverage
     - name: Upload coverage to Codecov 
       uses: codecov/codecov-action@v1.0.2
       with:

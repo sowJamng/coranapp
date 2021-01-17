@@ -1,4 +1,4 @@
-import 'package:coran/Model/Lecteurs.dart';
+import 'package:coran/Model/Lecteurs/Lecteurs.dart';
 import 'package:flutter/material.dart';
 
 class Parametres extends StatefulWidget {

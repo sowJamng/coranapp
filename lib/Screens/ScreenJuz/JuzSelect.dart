@@ -1,10 +1,9 @@
 import 'package:audioplayer/audioplayer.dart';
-import 'package:coran/Model/Alljiza.dart';
-
-import 'package:coran/Model/Allsourate.dart';
-import 'package:coran/Model/MesSourates.dart';
-import 'package:coran/Model/MyPopupItem.dart';
-import 'package:coran/Screens/Parametres.dart';
+import 'package:coran/Model/Ajiza/Alljiza.dart';
+import '../../Model/sourates/Allsourate.dart' ;
+import 'package:coran/Model/sourates/MesSourates.dart';
+import 'package:coran/Model/Menu/MyPopupItem.dart';
+import 'package:coran/Screens/Parametres/Parametres.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,10 +24,8 @@ class JusSelect extends StatefulWidget {
 }
 
 class _JusSelectState extends State<JusSelect> {
-  /// Controller to scroll or jump to a particular item.
+ 
   final ItemScrollController itemScrollController = ItemScrollController();
-
-  /// Listener that reports the position of items when the list is scrolled.
   final ItemPositionsListener itemPositionsListener =
       ItemPositionsListener.create();
    String txt;
@@ -41,19 +38,14 @@ class _JusSelectState extends State<JusSelect> {
    Duration position;
    AudioPlayer audioPlayer;
    List<DropdownMenuItem<Verset>> _dropdownmenuItems;
-   String localFilePath;
   PlayerState playerState = PlayerState.stopped;
    List<Verset> mesversets;
   ScrollController controller = ScrollController();
   String kurl = "";
   get isPlaying => playerState == PlayerState.playing;
   get isPaused => playerState == PlayerState.paused;
-  // get durationText =>
-  //     duration != null ? duration.toString().split('.').first : '';
-  // get positionText =>
-  //     position != null ? position.toString().split('.').first : '';
+
   Duration vposition = new Duration(hours: 00, minutes: 00, seconds: 04);
-  get positionverset => "00:00:04";
    StreamSubscription _positionSubscription;
    StreamSubscription _audioPlayerStateSubscription;
    Widget titre;
@@ -72,8 +64,6 @@ class _JusSelectState extends State<JusSelect> {
     setState(() {
       _selectedverset = select;
       int i = _selectedverset.numv - widget.numeroaya;
-      //controler.jumpToIndex(7);
-      //controller.animateTo(7.0, duration: Duration(milliseconds:500),curve: Curves.easeInOut);
       itemScrollController.jumpTo(alignment: 0.0, index: i);
     });
   }
@@ -115,37 +105,13 @@ class _JusSelectState extends State<JusSelect> {
 
   Future play(String kUrl) async {
     await audioPlayer.play(kUrl);
-    // itemScrollController.jumpTo(index: i);
     setState(() {
       playerState = PlayerState.playing;
       isplay = true;
     });
   }
-
-  // Future playautomat(int index) async {
-  //   Verset verset = versetsearch[index];
-  //   String vr = 'https://everyayah.com/data/' +
-  //       Parametres.lecteur.ayabyaya +
-  //       mesSourates[widget.ajiza.sourate.numero - 1].numero +
-  //       verset.numero +
-  //       '.mp3';
-  //   print(vr);
-  //   await audioPlayer.play(vr);
-  //   if ((position == null)) {
-  //     verset = versetsearch[index + 1];
-  //     itemScrollController.jumpTo(index: index + 1);
-  //     vr = 'https://everyayah.com/data/' +
-  //         Parametres.lecteur.ayabyaya +
-  //         mesSourates[widget.ajiza.sourate.numero - 1].numero +
-  //         verset.numero +
-  //         '.mp3';
-  //     await audioPlayer.play(vr);
-  //   }
-  // }
-
   Future stop(String url) async {
     await audioPlayer.stop();
-
     this.play(url);
     setState(() {
       //playerState = PlayerState.playing;
@@ -169,19 +135,9 @@ class _JusSelectState extends State<JusSelect> {
     _height = _initheight;
     mesversets = widget.ajiza.beginverset;
     versetsearch = mesversets;
-    titre = Text(''
-        // widget.ajiza.sourate.nom,
-        // style: TextStyle( fontSize: 13.0),
-        // overflow: TextOverflow.clip,
-        // textAlign: TextAlign.center,
-        );
+    titre = Text('');
     _dropdownmenuItems = buildDropdownItem(widget.ajiza.beginverset);
     _selectedverset = _dropdownmenuItems[0].value;
-
-    // if(Parametres.lecteur.surname!="null")
-    //  kurl="https://www.al-hamdoulillah.com/coran/mp3/files/"+Parametres.lecteur.prenom+'-'+Parametres.lecteur.surname+'-'+Parametres.lecteur.nom+widget.numero+'.mp3';
-    // else
-    //      kurl="https://www.al-hamdoulillah.com/coran/mp3/files/"+Parametres.lecteur.prenom+'-'+Parametres.lecteur.nom+widget.numero+'.mp3';
   }
 
   void _selectedItem(MyPopupItem item) {
@@ -192,24 +148,6 @@ class _JusSelectState extends State<JusSelect> {
       if (item == listitemsurate[2]) _height = _initheight;
     });
   }
-//  _showMenu() async {
-//     await showMenu(
-//       position: RelativeRect.fromLTRB(100, 400, 100, 400),
-//       context: context,
-//       items: [
-//         PopupMenuItem(
-//           child: Text("InduceSmile.com"),
-//         ),
-//         PopupMenuItem(
-//           child: Text("Flutter.io"),
-//         ),
-//         PopupMenuItem(
-//           child: Text("Google.com"),
-//         ),
-//       ],
-//       elevation: 5.0,
-//     );
-//   }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -266,13 +204,7 @@ class _JusSelectState extends State<JusSelect> {
                     this.search = Icon(Icons.search);
                     versetsearch = mesversets;
                     this._searching = false;
-                    this.titre = Text(''
-                        //  this.titre=Text(
-                        //     widget.ajiza.sourate.nom,
-                        //     style: TextStyle( fontSize: 13.0),
-                        //     overflow: TextOverflow.clip,
-                        //     textAlign: TextAlign.center,
-                        );
+                    this.titre = Text(''                        );
                   }
                 });
               }),
@@ -295,34 +227,8 @@ class _JusSelectState extends State<JusSelect> {
         ],
       ),
       body: GestureDetector(
-        //onLongPress:()=> _showMenu(),
-        //onScaleUpdate: (ScaleUpdateDetails details){
-
-        //         setState(() {
-        //           if(_nb==0){
-        //           _height=_initheight +(_initheight * (details.scale * .35));
-        //           _nb=1;
-        //           print("scale=${details.scale} height=_$_height ih=$_initheight nb=$_nb");
-        //           }
-        //           else{
-        //             _height=28.0;
-        //             _nb=0;
-        //             print("scale=${details.scale} height=_$_height ih=$_initheight nb=$_nb");
-        //           }
-        //         });
-        //       },
-        // onScaleEnd: (ScaleEndDetails details){
-        //         setState(() {
-        //           _initheight=_height;
-        //           print("height=_$_height ih=$_initheight ");
-        //           _nb=0;
-
-        //         });
-        //       },
         child: Container(
           decoration: BoxDecoration(
-            //color: Color(0xFFFFEFEE),
-            // color: _searching?Colors.white:Colors.green,
             color: Parametres.fond ? Color(0xFF223645) : Colors.white,
             borderRadius: BorderRadius.only(
               topRight: Radius.circular(50.0),
@@ -338,30 +244,16 @@ class _JusSelectState extends State<JusSelect> {
                       topLeft: Radius.circular(15.0),
                       topRight: Radius.circular(15.0),
                     ),
-                    //      child:DraggableScrollbar.semicircle(
-                    //           labelTextBuilder: (offset) {
-                    //   final int currentItem = controller.hasClients ?
-                    //   (controller.offset / controller.position.maxScrollExtent * versetsearch.length).floor() : 0;
-                    //   return Text("$currentItem");
-                    // },
-                    // labelConstraints: BoxConstraints.tightFor(width: 20.0, height: 10.0),
-                    // controller: controller,
-                    // //cest por le defilement de la listview
-                    //               //   child: SafeArea(
-                    //               // child: Scrollbar(
-                    //                 child: ListView.builder(
-                    //                   controller:   controller,
                     child: SafeArea(
                       child: Scrollbar(
                         child: ScrollablePositionedList.builder(
                           itemScrollController: itemScrollController,
 
                           itemCount: versetsearch
-                              .length, //widget.ajiza.beginverset.length,
+                              .length, 
                           itemBuilder: (BuildContext context, int index) {
-                            final verset = versetsearch[
-                                index]; //widget.ajiza.beginverset[index];
-                            //final numaya=index +widget.numeroaya;
+                            final verset = versetsearch[index]; 
+                            
                             final vr = 'https://everyayah.com/data/' +
                                 Parametres.lecteur.ayabyaya +
                                 mesSourates[widget.ajiza.sourate.numero - 1]
@@ -373,19 +265,6 @@ class _JusSelectState extends State<JusSelect> {
                                   ? Color(0xFF223645)
                                   : Colors.white,
                               margin: EdgeInsets.only(top: 2.0, bottom: 2.0),
-
-                              // https://www.le-coran.com/integrer-coran-site.php  return Container(
-                              //   margin:
-                              //   EdgeInsets.only(top: 1.0, bottom: 1.0),
-                              //   padding: EdgeInsets.symmetric(
-                              //       horizontal: 1.0, vertical: 1.0),
-                              //   decoration: BoxDecoration(
-                              //     color: Parametres.fond? Color(0xFF223645):Colors.white,//Color(0xFFFFEFEE),
-                              //     borderRadius: BorderRadius.only(
-                              //       topRight: Radius.circular(0.0),
-                              //       bottomRight: Radius.circular(0.0),
-                              //     ),
-                              //   ),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
@@ -432,12 +311,7 @@ class _JusSelectState extends State<JusSelect> {
                                   Align(
                                     alignment: Alignment.bottomRight,
                                     child: Text(
-                                      //     (widget.ajiza.sourate==alalaq&&verset.numv==19)||(widget.ajiza.sourate==araf&&verset.numv==206)||(widget.ajiza.sourate==arrad&&verset.numv==15)||
-                                      //  (widget.ajiza.sourate==annahl&&verset.numv==49)||(widget.ajiza.sourate==alisra&&verset.numv==109)||(widget.ajiza.sourate==maryam&&verset.numv==58)||
-                                      //  (widget.ajiza.sourate==alhadjj&&(verset.numv==18||verset.numv==77))||(widget.ajiza.sourate==furqan&&verset.numv==60)||(widget.ajiza.sourate==annaml&&verset.numv==26)||
-                                      //  (widget.ajiza.sourate==asajdah&&verset.numv==15)||(widget.ajiza.sourate==sad&&verset.numv==15)||(widget.ajiza.sourate==fussila&&verset.numv==37)||
-                                      //  (widget.ajiza.sourate==annajm&&verset.numv==62)||(widget.ajiza.sourate==inshiqaq&&verset.numv==21) ?
-                                      (Sujod.withSujod(widget.ajiza.sourate,
+                             (Sujod.withSujod(widget.ajiza.sourate,
                                               verset.numv))
                                           ? '﴾${verset.numv}﴿ ۩ '
                                           : '﴾${verset.numv}﴿',
@@ -488,16 +362,7 @@ class _JusSelectState extends State<JusSelect> {
                                           //onPressed: () => isplay?pause():play(vr)//isPlaying ? stop(vr):playautomat(verset.numv),
                                           onPressed: () {
                                             print(vr);
-                                            isPlaying ? stop(vr) : play(vr);
-                                            // setState(() {
-                                            //   if(isplay==true){
-                                            //         this.pause();
-                                            //   }
-                                            //   else{
-                                            //     playautomat(index);
-                                            //   }
-                                            // });
-                                            // isPlaying ? stop(vr):playautomat(index);
+                                            isPlaying ? stop(vr) : play(vr);                                     
                                           }),
                                       IconButton(
                                         icon: Icon(Icons.pause_circle_outline,
