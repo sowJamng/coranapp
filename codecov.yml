@@ -13,11 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install dependencies
-      run: flutter pub get #./flutter/bin/flutter doctor #
+      run: ./flutter/bin/flutter doctor #pub get
     - name: Run tests
-      run: flutter pub run test #./flutter/bin/flutter test #
+      run: ./flutter/bin/flutter test #pub run test
     - name: Code Coverage
-      run: pub run test_coverage #./flutter/bin/flutter test --coverage #
+      run: ./flutter/bin/flutter test --coverage #pub run test_coverage
     - name: Upload coverage to Codecov 
       uses: codecov/codecov-action@v1.0.2
       with:
