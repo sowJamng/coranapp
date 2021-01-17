@@ -241,12 +241,7 @@ class _ChatScreenState extends State<ChatScreen> {
     favor.setNomsourate(widget.sourate.getNom()) ;
     favor.setNumsourate(widget.sourate.getNumero());
     favor.setOntap(0);
-    //https://sqliteonline.com/
-    //  favor.setSourate(widget.sourate);
-    // mes cours videos https://web.microsoftstream.com/group/2636dad7-18bb-4361-a790-be5309f4819b?view=videos
-    //  favor.setVerset(widget.sourate.versets[index]);
-    //favorie.date=nowFormatted;
-    //if(favori.verset!=null) il faut signaler que ce verset est deja ajouté aux favori
+    //il faut signaler que ce verset est deja ajouté aux favori
 
     if (await helper.exist(favor.getNumverset(), favor.getNumsourate()) ==
         false) {
@@ -420,11 +415,7 @@ class _ChatScreenState extends State<ChatScreen> {
                             verset.numero +
                             '.mp3';
                         Intl.defaultLocale = 'ar';
-                        //context.locale=Locale('ar');
-                        //var format = NumberFormat().format(numero);
                         return GestureDetector(
-                          //cetait pour lautre metode dajout aux favorie
-                          // onLongPress:()=> _showMenu(index),
                           child: Card(
                             color: Parametres.fond
                                 ? Color(0xFF223645)
@@ -444,16 +435,12 @@ class _ChatScreenState extends State<ChatScreen> {
                                         fontWeight: FontWeight.w400,
                                         fontSize: _height,
                                         color: Colors.green,
-                                        //backgroundColor: Color(0xFFFFEFEE),
                                         letterSpacing: 0.3,
                                       ),
                                       textAlign: TextAlign.center,
                                     ),
                                   ),
                                 SizedBox(height: 7.0),
-                                //  if(((widget.sourate==baqara)&&((verset.numv==26)||(verset.numv==44)||(verset.numv==60)||(verset.numv==75)||(verset.numv==95)||(verset.numv==106)||(verset.numv==124)||(verset.numv==142)||(verset.numv==158)||(verset.numv==177)||(verset.numv==189)||(verset.numv==203)||(verset.numv==219)||(verset.numv==233)||(verset.numv==243)||(verset.numv==253)||(verset.numv==263)||(verset.numv==272)||(verset.numv==283)))||
-                                // ((widget.sourate==imran)&&((verset.numv==15)||(verset.numv==33)||(verset.numv==52)||(verset.numv==75)||(verset.numv==93)||(verset.numv==113)||(verset.numv==133)||(verset.numv==153)||(verset.numv==171)||(verset.numv==186)))||
-                               
                                 if (Sujod.withStart(
                                     widget.sourate, verset.numv))
                                   Align(
