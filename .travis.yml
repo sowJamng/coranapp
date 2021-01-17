@@ -1,23 +1,40 @@
 language: dart
-dart:
-  - stable
-  - "2.10.3"
-  - "2.9.3"
-  - "2.8.4"  
-  - "2.7.2"
+
+dart: 
+   - stable
+   - beta
+   - dev
 addons: # installer des packages supplementaire sur le sys OS
   apt:
     packages:
       - lib32stdc ++ 6
+
 install:
   - git clone https://github.com/sowJamng/coranapp.git -b stable 
-  - ./flutter/bin/flutter doctor #aulieu de pub get
-  - gem install coveralls-lcov # install coveralls-lcov pour installer les combinaison
+  - pub get
+  - flutter --version
+  - pub upgrade 
+ 
 script:
-  - ./flutter/bin/flutter test --coverage #generer un rapport de couverture de code
-  - ./flutter/bin/flutter test  
-after_success:
-  -coveralls-lcov coverage/lcov.info #pour envoyer le rapport de couverture de test
+   - pub get
+   - flutter --version
+   - pub upgrade
 cache:
   directories:
-    - $HOME/.pub-cache #pour indiquer a travis de mettre en cache le contenu du cache de dart par defaut pour que flutter puisse installer rapidement les dependences de lapp
+    - $HOME/.pub-cache 
+#addons: # installer des packages supplementaire sur le sys OS
+  #apt:
+  #  packages:
+      #- lib32stdc ++ 6
+#install:
+  #- git clone https://github.com/sowJamng/coranapp.git -b stable 
+ # - pub get #./flutter/bin/flutter doctor #aulieu de pub get
+  #- gem install coveralls-lcov # install coveralls-lcov pour installer les combinaison
+#script:
+  #- ./flutter/bin/flutter test --coverage #generer un rapport de couverture de code
+  #- ./flutter/bin/flutter test  
+#after_success:
+ # -coveralls-lcov coverage/lcov.info #pour envoyer le rapport de couverture de test
+#cache:
+ # directories:
+   # - $HOME/.pub-cache #pour indiquer a travis de mettre en cache le contenu du cache de dart par defaut pour que flutter puisse installer rapidement les dependences de lapp
