@@ -81,7 +81,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       favorieFutureList.then((souratesLists) {
         setState(() {
           this.listsourateCourante = souratesLists;
-        //  this.count = favoriLists.length;
         });
       });
     });
@@ -108,7 +107,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     }
     updateListView();
 
-   // print('la longeur de la liste est ${listsourateCourante.length}');
    if(listsourateCourante.length>0)
   {  sourateCourante=listsourateCourante[listsourateCourante.length-1];
     sourate=mesSourates[sourateCourante.getNumsourate()-1].getSourate();
@@ -137,17 +135,16 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                       Sourates.souratesdisplay=mesSourates;
                       MyAjiza.ajizadisplay=mesAjiza;
                    }); 
-                  }//=>_searchBar(),
+                  }
                 ):
             IconButton(
                 icon: Icon(Icons.search),
                 onPressed: (){
-                  //_searchBar();
                    setState(() {
                       Home.search=true;
                    }); 
-                  }//=>_searchBar(),
-                ),// => displayDialogue(context)),
+                  }
+                ),
             IconButton(
                 icon: Icon(Icons.book),
                 onPressed: () {
