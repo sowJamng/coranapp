@@ -11,11 +11,11 @@ addons: # installer des packages supplementaire sur le sys OS
       - lib32stdc ++ 6
 install:
   - git clone https://github.com/sowJamng/coranapp.git -b stable 
-  - ./flutter/bin/flutter doctor #aulieu de pub get
+  - flutter pub get #aulieu de t  ./flutter/bin/flutter doctor
   - gem install coveralls-lcov # install coveralls-lcov pour installer les combinaison
 script:
-  - ./flutter/bin/flutter test --coverage #generer un rapport de couverture de code
-  - ./flutter/bin/flutter test  
+  - flutter run test --coverage #./flutter/bin/flutter test --coverage #generer un rapport de couverture de code
+  - flutter run test #./flutter/bin/flutter test  
 after_success:
   -coveralls-lcov coverage/lcov.info #pour envoyer le rapport de couverture de test
 cache:
