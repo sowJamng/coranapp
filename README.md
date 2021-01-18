@@ -1,4 +1,4 @@
-[Build Status](https://travis-ci.com/sowJamng/coranapp.svg?token=ZhVm176DqhYeK7FGGNKB&branch=master)
+[![Build Status]](https://travis-ci.com/sowJamng/coranapp.svg?token=ZhVm176DqhYeK7FGGNKB&branch=master)
 # coran
 
 A new coran application with traduction of verses in wolf and you can learn et listen all verses of quran dou you want
