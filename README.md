@@ -17,9 +17,8 @@ samples, guidance on mobile development, and a full API reference.
 
 # [![Flutter logo][]][flutter.dev]
 
-[![Build Status]](https://travis-ci.com/sowJamng/coranapp.svg?token=ZhVm176DqhYeK7FGGNKB&branch=master)
-[![Gitter Channel][]][Gitter badge]
-[![Twitter handle][]][Twitter badge]
+![Build Status](https://travis-ci.com/sowJamng/coranapp.svg?token=ZhVm176DqhYeK7FGGNKB&branch=master)
+
 
 Flutter is Google's SDK for crafting beautiful, fast user experiences for
 mobile, web, and desktop from a single codebase. Flutter works with existing
