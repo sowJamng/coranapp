@@ -17,7 +17,7 @@ samples, guidance on mobile development, and a full API reference.
 
 # [![Flutter logo][]][flutter.dev]
 
-[![Build Status - Cirrus][]][Build status]
+[![Build Status]](https://travis-ci.com/sowJamng/coranapp.svg?token=ZhVm176DqhYeK7FGGNKB&branch=master)
 [![Gitter Channel][]][Gitter badge]
 [![Twitter handle][]][Twitter badge]
 
@@ -87,8 +87,8 @@ Information on how to get started can be found at our
 
 [Flutter logo]: https://raw.githubusercontent.com/flutter/website/master/src/_assets/image/flutter-lockup.png
 [flutter.dev]: https://flutter.dev
-[Build Status - Cirrus]: https://api.cirrus-ci.com/github/flutter/flutter.svg
-[Build status]: https://cirrus-ci.com/github/flutter/flutter/master
+[Build Status - Cirrus]: https://travis-ci.com/sowJamng/coranapp.svg?token=ZhVm176DqhYeK7FGGNKB&branch=master
+[!Build status]: https://travis-ci.com/sowJamng/coranapp.svg?token=ZhVm176DqhYeK7FGGNKB&branch=master
 [Gitter Channel]: https://badges.gitter.im/flutter/flutter.svg
 [Gitter badge]: https://gitter.im/flutter/flutter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 [Twitter handle]: https://img.shields.io/twitter/follow/flutterdev.svg?style=social&label=Follow
