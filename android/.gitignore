@@ -1,3 +1,5 @@
+# Ignore Gradle project-specific cache directory
+.gradle
 gradle-wrapper.jar
 /.gradle
 /captures/
@@ -5,3 +7,19 @@ gradle-wrapper.jar
 /gradlew.bat
 /local.properties
 GeneratedPluginRegistrant.java
+
+# Ignore Gradle build output directory
+build
+
+
+#secure key
+/Key.properties
+
+#Ignore for VSCode
+/.vscode
+/settings.gradle
+/.settings
+/.classpath
+/settings_aar.gradle
+/.project
+/.idea

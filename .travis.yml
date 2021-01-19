@@ -13,6 +13,9 @@ install:
 #   - ./flutter/bin/flutter test --coverage #generer un rapport de couverture de code
 # after_success:  #pour envoyer le rapport de couverture de test
 #   - coveralls-lcov coverage/lcov.info
+#   - ./flutter/bin/flutter test  
+# after_success:
+#   -coveralls-lcov coverage/lcov.info #pour envoyer le rapport de couverture de test
 cache:
   directories:
     - $HOME/.pub-cache #pour indiquer a travis de mettre en cache le contenu du cache de dart par defaut pour que flutter puisse installer rapidement les dependences de lapp
