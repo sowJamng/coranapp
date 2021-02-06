@@ -45,3 +45,10 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+
+#Ignore by Ibrahima
+/ios/Flutter/Debug.xcconfig
+/ios/Flutter/Release.xcconfig
+/coranapp/ios/Runner.xcodeproj/project.pbxproj
+/coranapp/ios/Podfile
+/coranapp/pubspec.lock
