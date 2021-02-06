@@ -47,8 +47,8 @@ app.*.symbols
 app.*.map.json
 
 #Ignore by Ibrahima
-/ios/Flutter/Debug.xcconfig
-/ios/Flutter/Release.xcconfig
-/coranapp/ios/Runner.xcodeproj/project.pbxproj
-/coranapp/ios/Podfile
-/coranapp/pubspec.lock
+ios/Flutter/Debug.xcconfig
+ios/Flutter/Release.xcconfig
+ios/Runner.xcodeproj/project.pbxproj
+ios/Podfile
+pubspec.lock
