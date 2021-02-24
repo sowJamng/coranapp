@@ -11,8 +11,8 @@ class Parametres extends StatefulWidget {
 }
 
 class _ParametresState extends State<Parametres> {
-   List<DropdownMenuItem<Lecteur>> _dropdownmenuItems;
-   Lecteur _selectedlecteur;
+  List<DropdownMenuItem<Lecteur>> _dropdownmenuItems;
+  Lecteur _selectedlecteur;
   @override
   void initState() {
     _dropdownmenuItems = buildDropdownItem(Lecteur.meslecteurs);
@@ -53,9 +53,9 @@ class _ParametresState extends State<Parametres> {
               height: 15.0,
             ),
             SwitchListTile(
-              title: const Text('Thème', style: TextStyle(color: Colors.white)),
+              title: const Text('Mélo', style: TextStyle(color: Colors.white)),
               subtitle:
-                  Text("Thème Sombre", style: TextStyle(color: Colors.white)),
+                  Text("Mélo wu nuul", style: TextStyle(color: Colors.white)),
               value: Parametres.fond,
               onChanged: (bool value) {
                 setState(() {
@@ -70,12 +70,12 @@ class _ParametresState extends State<Parametres> {
               height: 10.0,
             ),
             SwitchListTile(
-              title: const Text('Traduction',
+              title: const Text('Tekki',
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 15.0,
                       color: Colors.white)),
-              subtitle: Text("Afficher la traduction en wolof",
+              subtitle: Text("Feenal Tekki gi ci wolof",
                   style: TextStyle(color: Colors.white)),
               value: Parametres.trad,
               onChanged: (bool value) {
@@ -90,9 +90,9 @@ class _ParametresState extends State<Parametres> {
               height: 10.0,
             ),
             SwitchListTile(
-              title: const Text('Transcription ',
-                  style: TextStyle(color: Colors.white)),
-              subtitle: Text("Afficher la transcription",
+              title:
+                  const Text('Bindaan', style: TextStyle(color: Colors.white)),
+              subtitle: Text("Feenal mbindaan mi",
                   style: TextStyle(color: Colors.white)),
               value: Parametres.trans,
               onChanged: (bool value) {
@@ -103,7 +103,7 @@ class _ParametresState extends State<Parametres> {
               activeColor: Colors.green,
               activeTrackColor: Colors.greenAccent[400],
             ),
-            Text('Selectionner un Lecteur',
+            Text('Tànn ab jàngkat',
                 style: TextStyle(color: Colors.white, fontSize: 15.0)),
             Container(
               child: Center(
@@ -114,7 +114,7 @@ class _ParametresState extends State<Parametres> {
                       items: _dropdownmenuItems,
                       onChanged: (_value) => onChangeLecteur(_value),
                       isExpanded: false,
-                      hint: Text('Lecteur',
+                      hint: Text('jàngkat',
                           style: TextStyle(color: Colors.white)),
                     ),
                   ],

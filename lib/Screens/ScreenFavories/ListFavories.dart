@@ -16,16 +16,16 @@ class ListFavories extends StatefulWidget {
 class _ListFavoriesState extends State<ListFavories> {
   @override
   void dispose() {
-    
     // databaseHelper.close();
     super.dispose();
   }
+
   DatabaseHelper databaseHelper = DatabaseHelper();
-   List<Allfavories> favorilists;
+  List<Allfavories> favorilists;
   int count = 0;
   @override
   Widget build(BuildContext context) {
-    if (favorilists== null) {
+    if (favorilists == null) {
       favorilists = <Allfavories>[];
       updateListView();
     }
@@ -33,7 +33,7 @@ class _ListFavoriesState extends State<ListFavories> {
     return count == 0
         ? Container(
             color: Parametres.fond ? Color(0xFF223645) : Colors.white,
-            child: Center(child: Text('Aucun Favorie')))
+            child: Center(child: Text('Amul Tànneef')))
         : Container(
             color: Parametres.fond ? Color(0xFF223645) : Colors.white,
             child: SafeArea(
@@ -48,8 +48,8 @@ class _ListFavoriesState extends State<ListFavories> {
                           children: <Widget>[
                             ListTile(
                               title: Text(
-                                  favorilists[index].getNomSourate().length<1
-                                      ? 'nom sourate'
+                                  favorilists[index].getNomSourate().length < 1
+                                      ? 'Saar wi'
                                       : favorilists[index].nomsourate,
                                   style: TextStyle(
                                     color: Parametres.fond
@@ -57,7 +57,7 @@ class _ListFavoriesState extends State<ListFavories> {
                                         : Colors.black,
                                   )), //favorilist[index].sourate.nom favorilist[index].sourate.nb
                               subtitle: Text(
-                                  '${mesSourates[favorilists[index].getNumsourate() - 1].lieu} - Ayat ${favorilists[index].numverset}',
+                                  '${mesSourates[favorilists[index].getNumsourate() - 1].lieu} - Laaya ${favorilists[index].numverset}',
                                   style: TextStyle(
                                     color: Parametres.fond
                                         ? Colors.white70
@@ -224,15 +224,22 @@ class _ListFavoriesState extends State<ListFavories> {
   void _delete(BuildContext context, Allfavories favorie) async {
     int result = await databaseHelper.delete(favorie.id);
     if (result == 0) {
-      // _showSnackBar(context, 'Suppression effectuee');
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Suppression effectuee!'),
-        ),
-      );
-    
+      _showSnackBar(context, 'Suppression effectuee');
+      // SnackBar(content: Text('suppression effectue a vec succees'));
+      // ScaffoldMessenger.of(context).showSnackBar(
+      //   const SnackBar(
+      //     content: Text('Suppression effectuee!'),
+      //   ),
+      // );
+
     }
+
     updateListView();
+  }
+
+  void _showSnackBar(BuildContext context, String message) {
+    final snackbar = SnackBar(content: Text(message));
+    Scaffold.of(context).showSnackBar(snackbar);
   }
 
   void _update(BuildContext context, Allfavories favorie) async {

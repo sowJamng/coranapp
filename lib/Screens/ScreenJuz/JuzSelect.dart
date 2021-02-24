@@ -1,6 +1,6 @@
 import 'package:audioplayer/audioplayer.dart';
 import 'package:coran/Model/Ajiza/Alljiza.dart';
-import '../../Model/sourates/Allsourate.dart' ;
+import '../../Model/sourates/Allsourate.dart';
 import 'package:coran/Model/sourates/MesSourates.dart';
 import 'package:coran/Model/Menu/MyPopupItem.dart';
 import 'package:coran/Screens/Parametres/Parametres.dart';
@@ -17,40 +17,39 @@ enum PlayerState { stopped, playing, paused }
 class JusSelect extends StatefulWidget {
   final Ajiza ajiza;
   final int numeroaya;
-  JusSelect({ this.ajiza,  this.numeroaya});
+  JusSelect({this.ajiza, this.numeroaya});
 
   @override
   _JusSelectState createState() => _JusSelectState();
 }
 
 class _JusSelectState extends State<JusSelect> {
- 
   final ItemScrollController itemScrollController = ItemScrollController();
   final ItemPositionsListener itemPositionsListener =
       ItemPositionsListener.create();
-   String txt;
-   double _height;
-   double _initheight;
-   Verset _selectedverset;
+  String txt;
+  double _height;
+  double _initheight;
+  Verset _selectedverset;
   bool _searching = false;
   bool isplay = false;
-   Duration duration;
-   Duration position;
-   AudioPlayer audioPlayer;
-   List<DropdownMenuItem<Verset>> _dropdownmenuItems;
+  Duration duration;
+  Duration position;
+  AudioPlayer audioPlayer;
+  List<DropdownMenuItem<Verset>> _dropdownmenuItems;
   PlayerState playerState = PlayerState.stopped;
-   List<Verset> mesversets;
+  List<Verset> mesversets;
   ScrollController controller = ScrollController();
   String kurl = "";
   get isPlaying => playerState == PlayerState.playing;
   get isPaused => playerState == PlayerState.paused;
 
   Duration vposition = new Duration(hours: 00, minutes: 00, seconds: 04);
-   StreamSubscription _positionSubscription;
-   StreamSubscription _audioPlayerStateSubscription;
-   Widget titre;
+  StreamSubscription _positionSubscription;
+  StreamSubscription _audioPlayerStateSubscription;
+  Widget titre;
   Icon search = Icon(Icons.search);
-   List<Verset> versetsearch;
+  List<Verset> versetsearch;
   MyPopupItem _select = listitemsurate[0];
   List<DropdownMenuItem<Verset>> buildDropdownItem(List versets) {
     List<DropdownMenuItem<Verset>> items = [];
@@ -110,6 +109,7 @@ class _JusSelectState extends State<JusSelect> {
       isplay = true;
     });
   }
+
   Future stop(String url) async {
     await audioPlayer.stop();
     this.play(url);
@@ -165,7 +165,7 @@ class _JusSelectState extends State<JusSelect> {
               items: _dropdownmenuItems,
               onChanged: (_value) => onChangeVerset(_value),
               isExpanded: false,
-              hint: Text('numero verset', style: TextStyle(color: Colors.blue)),
+              hint: Text('numero laaya', style: TextStyle(color: Colors.blue)),
               underline: Text(
                 '${widget.ajiza.numeroaya}' + '.' + widget.ajiza.sourate.nom,
                 style: TextStyle(color: Colors.white, fontSize: 11.0),
@@ -204,7 +204,7 @@ class _JusSelectState extends State<JusSelect> {
                     this.search = Icon(Icons.search);
                     versetsearch = mesversets;
                     this._searching = false;
-                    this.titre = Text(''                        );
+                    this.titre = Text('');
                   }
                 });
               }),
@@ -248,12 +248,10 @@ class _JusSelectState extends State<JusSelect> {
                       child: Scrollbar(
                         child: ScrollablePositionedList.builder(
                           itemScrollController: itemScrollController,
-
-                          itemCount: versetsearch
-                              .length, 
+                          itemCount: versetsearch.length,
                           itemBuilder: (BuildContext context, int index) {
-                            final verset = versetsearch[index]; 
-                            
+                            final verset = versetsearch[index];
+
                             final vr = 'https://everyayah.com/data/' +
                                 Parametres.lecteur.ayabyaya +
                                 mesSourates[widget.ajiza.sourate.numero - 1]
@@ -311,7 +309,7 @@ class _JusSelectState extends State<JusSelect> {
                                   Align(
                                     alignment: Alignment.bottomRight,
                                     child: Text(
-                             (Sujod.withSujod(widget.ajiza.sourate,
+                                      (Sujod.withSujod(widget.ajiza.sourate,
                                               verset.numv))
                                           ? '﴾${verset.numv}﴿ ۩ '
                                           : '﴾${verset.numv}﴿',
@@ -362,7 +360,7 @@ class _JusSelectState extends State<JusSelect> {
                                           //onPressed: () => isplay?pause():play(vr)//isPlaying ? stop(vr):playautomat(verset.numv),
                                           onPressed: () {
                                             print(vr);
-                                            isPlaying ? stop(vr) : play(vr);                                     
+                                            isPlaying ? stop(vr) : play(vr);
                                           }),
                                       IconButton(
                                         icon: Icon(Icons.pause_circle_outline,

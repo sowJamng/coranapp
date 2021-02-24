@@ -7289,7 +7289,7 @@ Sourate maIda = Sourate(
     ]);
 Sourate anam = Sourate(
   numero: 6,
-    nom: "Jur Ga",
+  nom: "Jur Ga",
   nbaya: '165',
   lecteurs: lecteurs,
   audio:
@@ -10576,7 +10576,8 @@ Sourate araf = Sourate(
           numero: '206',
           arabe:
               "إِنَّ الَّذِينَ عِندَ رَبِّكَ لاَ يَسْتَكْبِرُونَ عَنْ عِبَادَتِهِ وَيُسَبِّحُونَهُ وَلَهُ يَسْجُدُونَ ",
-          francais: "texte en francais",
+          francais:
+              " Ceux qui sont auprès de ton Seigneur [les anges] ne dédaignent pas de L'adorer. Ils Le glorifient et se prosternent devant Lui.",
           wolof:
               "Ña nga xam ne ñanga ca sa Boroom, duñu di rëylu ci jaamu Ko. Te danañu Ko di sàbbaal, di Ko sujjóotal.")
     ]);
@@ -47385,7 +47386,8 @@ Sourate alinssan = Sourate(
           numv: 20,
           numero: '020',
           arabe: "وَإِذَا رَأَيْتَ ثَمَّ رَأَيْتَ نَعِيمًا وَمُلْكًا كَبِيرًا ",
-          francais: "texte en francais",
+          francais:
+              " Et quand tu regarderas là-bas, tu verras un délice et un vaste royaume.",
           wolof: 'Soo ko gisee, danga fa gIisaale xeewal ak nguur gu màgg.'),
       Verset(
           numv: 21,
@@ -49183,155 +49185,160 @@ Sourate inshiqaq = Sourate(
           numv: 1,
           numero: '001',
           arabe: "إِذَا السَّمَاءُ انشَقَّتْ ",
-          francais: "texte en francais",
+          francais: "Quand le ciel se déchirera",
           wolof: 'Saa su asamaan si xottikoo! Maa ngi giiñ! '),
       Verset(
           numv: 2,
           numero: '002',
           arabe: "وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ ",
-          francais: "texte en francais",
+          francais: " et obéira à son Seigneur -et fera ce qu'il doit faire -",
           wolof: 'te mu def – ndigalu boroomam dëggël'),
       Verset(
           numv: 3,
           numero: '003',
           arabe: "وَإِذَا الْأَرْضُ مُدَّتْ ",
-          francais: "texte en francais",
+          francais: " et que la terre sera nivelée,",
           wolof: 'ak saa suñu maasalee suuf si,'),
       Verset(
           numv: 4,
           numero: '004',
           arabe: "وَأَلْقَتْ مَا فِيهَا وَتَخَلَّتْ ",
-          francais: "texte en francais",
+          francais:
+              " et qu'elle rejettera ce qui est en son sein (les morts) et se videra,",
           wolof: 'te mu gëx lép lu nekk ci biiram, '),
       Verset(
           numv: 5,
           numero: '005',
           arabe: "وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ ",
-          francais: "texte en francais",
+          francais:
+              " et qu'elle obéira à son Seigneur -et fera ce qu'elle doit faire -",
           wolof: 'moom it – mu def ngigëlu boroomam dëggël ko'),
       Verset(
           numv: 6,
           numero: '006',
           arabe:
               "يَا أَيُّهَا الْإِنسَانُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًا فَمُلَاقِيهِ ",
-          francais: "texte en francais",
+          francais:
+              " Ô homme ! Toi qui t'efforces vers ton Seigneur sans relâche, tu Le rencontreras alors.",
           wolof:
               'Éy yaw nit ! Yaa ngi def jëm ci sa boroom, te danga dajeek moom de.'),
       Verset(
           numv: 7,
           numero: '007',
           arabe: "فَأَمَّا مَنْ أُوتِيَ كِتَابَهُ بِيَمِينِهِ ",
-          francais: "texte en francais",
+          francais: " Celui qui recevra son livre en sa main droite,ais",
           wolof: 'Képp ku ñu joxe téereem ci loxob ndeyjooram, '),
       Verset(
           numv: 8,
           numero: '008',
           arabe: "فَسَوْفَ يُحَاسَبُ حِسَابًا يَسِيرًا ",
-          francais: "texte en francais",
+          francais: " sera soumis à un jugement facile,",
           wolof: 'dees na ko màndaxe mu jàppandal,'),
       Verset(
           numv: 9,
           numero: '009',
           arabe: "وَيَنقَلِبُ إِلَىٰ أَهْلِهِ مَسْرُورًا ",
-          francais: "texte en francais",
+          francais: " et retournera réjoui auprès de sa famille.",
           wolof: 'muy walbatiku jëm cag njabootam di bég.'),
       Verset(
           numv: 10,
           numero: '010',
           arabe: "وَأَمَّا مَنْ أُوتِيَ كِتَابَهُ وَرَاءَ ظَهْرِهِ ",
-          francais: "texte en francais",
+          francais: " Quant à celui qui recevra son livre derrière son dos,",
           wolof:
               'Képp koo xam ne nag moom da ñu koo jox téereem ci ginnaawam,'),
       Verset(
           numv: 11,
           numero: '011',
           arabe: "فَسَوْفَ يَدْعُو ثُبُورًا ",
-          francais: "texte en francais",
+          francais: " il invoquera la destruction sur lui-même,",
           wolof: 'Ngalla moom kon,'),
       Verset(
           numv: 12,
           numero: '012',
           arabe: "وَيَصْلَىٰ سَعِيرًا ",
-          francais: "texte en francais",
+          francais: " et il brûlera dans un feu ardent.",
           wolof: 'te dana xoyomoo safaraw Sa’iir.'),
       Verset(
           numv: 13,
           numero: '013',
           arabe: "إِنَّهُ كَانَ فِي أَهْلِهِ مَسْرُورًا ",
-          francais: "texte en francais",
+          francais: " Car il était tout joyeux parmi les siens,",
           wolof: ' Moom ku bégoon la cag njabootam,'),
       Verset(
           numv: 14,
           numero: '014',
           arabe: "إِنَّهُ ظَنَّ أَن لَّن يَحُورَ ",
-          francais: "texte en francais",
+          francais: " et il pensait que jamais il ne ressusciterait.",
           wolof: 'foogoon  na ne du dekkiwaat mukk.'),
       Verset(
           numv: 15,
           numero: '015',
           arabe: "بَلَىٰ إِنَّ رَبَّهُ كَانَ بِهِ بَصِيرًا ",
-          francais: "texte en francais",
+          francais: " Mais si ! Certes, son Seigneur l'observait parfaitement.",
           wolof: 'Axakañ boroomam daan na ko gis de.'),
       Verset(
           numv: 16,
           numero: '016',
           arabe: "فَلَا أُقْسِمُ بِالشَّفَقِ ",
-          francais: "texte en francais",
+          francais: " Non ! Je jure par le crépuscule,",
           wolof: 'Déet !... Maa ngi giiñ ci yeeri ji, '),
       Verset(
           numv: 17,
           numero: '017',
           arabe: "وَاللَّيْلِ وَمَا وَسَقَ ",
-          francais: "texte en francais",
+          francais: " et par la nuit et ce qu'elle enveloppe,",
           wolof: 'ak ci guddeek la mu làmboo,'),
       Verset(
           numv: 18,
           numero: '018',
           arabe: "وَالْقَمَرِ إِذَا اتَّسَقَ ",
-          francais: "texte en francais",
+          francais: " et par la lune quand elle devient pleine-lune !",
           wolof: ' ak ci weer wi su xàbbee wërngëlu mat  ! '),
       Verset(
           numv: 19,
           numero: '019',
           arabe: "لَتَرْكَبُنَّ طَبَقًا عَن طَبَقٍ ",
-          francais: "texte en francais",
+          francais: " Vous passerez, certes, par des états successifs !",
           wolof: 'Dingeen jaar, ay jaar-jaar  yu tegaloo yu bari  !'),
       Verset(
           numv: 20,
           numero: '020',
           arabe: "فَمَا لَهُمْ لَا يُؤْمِنُونَ ",
-          francais: "texte en francais",
+          francais: " Qu'ont-ils à ne pas croire ?",
           wolof: 'Ana lu leen dal ba gëmuñu ?  '),
       Verset(
           numv: 21,
           numero: '021',
           arabe: "وَإِذَا قُرِئَ عَلَيْهِمُ الْقُرْآنُ لَا يَسْجُدُونَ ",
-          francais: "texte en francais",
+          francais: " Et à ne pas se prosterner quand le Coran leur est lu ?",
           wolof: 'te suñu jàngee ci ñoom Alxuraan duñu sujuud ?'),
       Verset(
           numv: 22,
           numero: '022',
           arabe: "بَلِ الَّذِينَ كَفَرُوا يُكَذِّبُونَ ",
-          francais: "texte en francais",
+          francais:
+              "Mais ceux qui ne croient pas, le traitent plutôt de mensonge",
           wolof: 'Yéefër ya, ñoo koy weddi.'),
       Verset(
           numv: 23,
           numero: '023',
           arabe: "وَاللَّهُ أَعْلَمُ بِمَا يُوعُونَ ",
-          francais: "texte en francais",
+          francais: " Or, Allah sait bien ce qu'ils dissimulent.",
           wolof: 'Yàlla xam na la ñuy xalaat.'),
       Verset(
           numv: 24,
           numero: '024',
           arabe: "فَبَشِّرْهُم بِعَذَابٍ أَلِيمٍ ",
-          francais: "texte en francais",
+          francais: "Annonce-leur donc un châtiment douloureux.",
           wolof: 'Na gneen leen xibaar mbugël mu mitti ma.'),
       Verset(
           numv: 25,
           numero: '025',
           arabe:
               "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ ",
-          francais: "texte en francais",
+          francais:
+              "Sauf ceux qui croient et accomplissent les bonnes œuvres: à eux une récompense jamais interrompue.",
           wolof:
               ' Ba mu des ña gëm tey jëf yiw : ñoom am na ñu pey gu dootul dog.')
     ]);

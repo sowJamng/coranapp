@@ -124,7 +124,7 @@ class _SouratesState extends State<Sourates> {
             color: Parametres.fond ? Color(0xFF223645) : Colors.white,
             child: Center(
               child: Text(
-                'Aucun resultat trouvé pour votre recherche',
+                'Sa ceet gi jurul dara',
                 style: TextStyle(
                     fontSize: 13.0,
                     color: Parametres.fond ? Colors.white : Colors.black),

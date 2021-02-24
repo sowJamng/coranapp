@@ -22,7 +22,7 @@ class ChatScreen extends StatefulWidget {
   final Sourate sourate;
   final String numero;
   final numofindex;
-  ChatScreen({this.sourate, this.numero,this.numofindex});
+  ChatScreen({this.sourate, this.numero, this.numofindex});
 
   @override
   _ChatScreenState createState() => _ChatScreenState();
@@ -36,28 +36,28 @@ class _ChatScreenState extends State<ChatScreen> {
   final ItemPositionsListener itemPositionsListener =
       ItemPositionsListener.create();
   static var posi;
-   List<DropdownMenuItem<Verset>> _dropdownmenuItems;
+  List<DropdownMenuItem<Verset>> _dropdownmenuItems;
   DatabaseHelper helper = DatabaseHelper();
   DatabaseHelperSourate helpersourate = DatabaseHelperSourate();
-   Allfavories favorie;
-   Verset _selectedverset;
+  Allfavories favorie;
+  Verset _selectedverset;
   int selectedIndex = 0;
   Icon search = Icon(Icons.search);
   bool _searching = false;
   bool isplay = false;
-   Widget titre;
-   String txt;
-   double _initheight;
-   double _height;
-   Duration duration;
-   Duration position;
-   AudioPlayer audioPlayer;
-   String localFilePath;
+  Widget titre;
+  String txt;
+  double _initheight;
+  double _height;
+  Duration duration;
+  Duration position;
+  AudioPlayer audioPlayer;
+  String localFilePath;
   PlayerState playerState = PlayerState.stopped;
-   List<Verset> versetsearch;
-   List<DropdownMenuItem<Lecteur>> _dropdownmenuItemsl;
-   Lecteur _selectedlecteur;
-   List<Verset> mesversets;
+  List<Verset> versetsearch;
+  List<DropdownMenuItem<Lecteur>> _dropdownmenuItemsl;
+  Lecteur _selectedlecteur;
+  List<Verset> mesversets;
   ScrollController controller = ScrollController();
   String kurl = "";
   get isPlaying => playerState == PlayerState.playing;
@@ -67,8 +67,8 @@ class _ChatScreenState extends State<ChatScreen> {
   // get positionText =>
   //     position != null ? position.toString().split('.').first : '';
 
-   StreamSubscription _positionSubscription;
-   StreamSubscription _audioPlayerStateSubscription;
+  StreamSubscription _positionSubscription;
+  StreamSubscription _audioPlayerStateSubscription;
   MyPopupItem _select = listitemsurate[0];
   Icon favori = Icon(Icons.favorite);
   Icon addfavori = Icon(Icons.favorite_border);
@@ -78,8 +78,7 @@ class _ChatScreenState extends State<ChatScreen> {
     versets.forEach((verset) {
       items.add(DropdownMenuItem(value: verset, child: Text('${verset.numv}')));
     });
-      
-    
+
     return items;
   }
 
@@ -148,7 +147,8 @@ class _ChatScreenState extends State<ChatScreen> {
     var formatter = new DateFormat("yyyy-MM-dd'T'HH:mm:ss", 'en');
     DateTime now = new DateTime.now();
     String nowFormatted = formatter.format(now);
-    SourateCourante sourat = new SourateCourante(nowFormatted,widget.sourate.getNumero(),0,posi);
+    SourateCourante sourat =
+        new SourateCourante(nowFormatted, widget.sourate.getNumero(), 0, posi);
     await helpersourate.deleteAll();
     await helpersourate.insertSourate(sourat);
   }
@@ -237,8 +237,8 @@ class _ChatScreenState extends State<ChatScreen> {
     favor.setDate(nowFormatted);
     favor.setVarabe(widget.sourate.versets[index].getArabe());
     favor.setVwolof(widget.sourate.versets[index].getWolof());
-    favor.setNumverset(widget.sourate.versets[index].getNumv()) ;
-    favor.setNomsourate(widget.sourate.getNom()) ;
+    favor.setNumverset(widget.sourate.versets[index].getNumv());
+    favor.setNomsourate(widget.sourate.getNom());
     favor.setNumsourate(widget.sourate.getNumero());
     favor.setOntap(0);
     //il faut signaler que ce verset est deja ajouté aux favori
@@ -252,8 +252,8 @@ class _ChatScreenState extends State<ChatScreen> {
       // else
       //  _showAletDialog('Statut', 'Problem d\'Ajout aux favories');
     } else
-      _showSnackBar(
-          context, 'Verset ${favor.getNumverset()} déjà ajouté aux favories');
+      _showSnackBar(context,
+          'Verset ${favor.getNumverset()} Xas na dugg na ca Tànnef yi');
   }
 
   void _showSnackBar(BuildContext context, String message) {
@@ -292,7 +292,7 @@ class _ChatScreenState extends State<ChatScreen> {
               items: _dropdownmenuItems,
               onChanged: (_value) => onChangeVerset(_value),
               isExpanded: false,
-              hint: Text('numero verset', style: TextStyle(color: Colors.blue)),
+              hint: Text('numero Laaya', style: TextStyle(color: Colors.blue)),
               underline: Text(
                   '${widget.sourate.numero}' + '.' + widget.sourate.nom,
                   style: TextStyle(color: Colors.white, fontSize: 11.0),
@@ -386,7 +386,6 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           child: Column(
             children: <Widget>[
-
               Expanded(
                 child: Container(
                   child: ClipRRect(
@@ -458,7 +457,6 @@ class _ChatScreenState extends State<ChatScreen> {
                                       textAlign: TextAlign.right,
                                     ),
                                   ),
-
                                 Container(
                                   margin:
                                       EdgeInsets.only(left: 35.0, right: 3.0),
@@ -500,7 +498,6 @@ class _ChatScreenState extends State<ChatScreen> {
                                     ), //textAlign: TextAlign.right,
                                   ),
                                 ),
-
                                 SizedBox(height: 3.0),
                                 if (Parametres.trans == true)
                                   Text(
@@ -535,7 +532,7 @@ class _ChatScreenState extends State<ChatScreen> {
                                         ), //isplay?Icon(Icons.pause_circle_outline,color:Colors.indigo):Icon(Icons.play_arrow,color: Colors.green,),
                                         onPressed: () {
                                           print(vr);
-                                    
+
                                           isPlaying
                                               ? stop(vr)
                                               : play(vr); //playautomat(index);
@@ -554,7 +551,7 @@ class _ChatScreenState extends State<ChatScreen> {
                                           setState(() {
                                             _save(index);
                                             _showSnackBar(context,
-                                                'Verset ${verset.numv} ajouté aux favories avec succés');
+                                                'Verset ${verset.numv} Dugg na ca tànnef ya ak jàmm');
                                           });
                                         }),
                                     Builder(
@@ -593,7 +590,6 @@ class _ChatScreenState extends State<ChatScreen> {
       ),
     );
   }
-
 
   void share(
       BuildContext context, Verset verset, Sourate sourate, final numero) {
