@@ -100,7 +100,7 @@ List<MyPopupItem> listitem = <MyPopupItem>[
         Icons.settings,
         color: Colors.white,
       ),
-      title: Text("Parametres",
+      title: Text("Jagal yi",
           style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 15.0,
@@ -122,5 +122,18 @@ List<MyPopupItem> listitem = <MyPopupItem>[
                 color: Colors.white)),
         onTap: () => Share.share(
             "Apprendre et écouter le coran avec la traduction de chaque verset en wolof sur https://play.google.com/store/apps/details?id=www.islam.sn.coran")),
+  ),
+  MyPopupItem(
+    listTile: ListTile(
+      leading: Icon(
+        Icons.info,
+        color: Colors.white,
+      ),
+      title: Text("Xibaar",
+          style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 14.0,
+              color: Colors.white)),
+    ),
   ),
 ];

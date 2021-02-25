@@ -7,6 +7,7 @@ import 'package:coran/Screens/Parametres/Parametres.dart';
 import 'package:coran/Screens/Rappelslam/RappelsIslam.dart';
 import 'package:coran/Model//ReadPdf/ReadPdf.dart';
 import 'package:coran/Screens/ScreenSourates/sourates.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 import '../ScreenJuz/Ajiza.dart';
@@ -64,6 +65,38 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           MaterialPageRoute(
             builder: (_) => Parametres(),
           ),
+        );
+      final TextStyle textStyle = Theme.of(context).textTheme.bodyText2;
+      final List<Widget> aboutBoxChildren = <Widget>[
+        SizedBox(height: 24),
+        RichText(
+          text: TextSpan(
+            children: <TextSpan>[
+              TextSpan(
+                  style: TextStyle(
+                    color: Color(0xFF05966D),
+                  ),
+                  text: "Ki Firi kamil bi:Sén Seexuna Loo Ngaabu, "
+                      '\n Ni ko bindaat ci loyi laten yi:Sen Allaji Mamadou Ngeer ak Sen Goor-gi Jaw '
+                      '\n Ni taxawe saytouwaat gi ak nonal gi: Mbootayug WAX(Wolof ak Xamle)\n'),
+              TextSpan(
+                  style:
+                      textStyle.copyWith(color: Theme.of(context).accentColor),
+                  text:
+                      'https://play.google.com/store/apps/details?id=www.islam.sn.coran'),
+              TextSpan(style: textStyle, text: '.'),
+            ],
+          ),
+        ),
+      ];
+      if (item == listitem[4])
+        showAboutDialog(
+          context: context,
+          applicationVersion: '1.0',
+          applicationIcon: Icon(Icons.book),
+          applicationName: 'Al Xuraan',
+          applicationLegalese: '\u{a9} islam.sn 2021 ',
+          children: aboutBoxChildren,
         );
     });
   }
@@ -150,9 +183,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             PopupMenuButton<MyPopupItem>(
                 elevation: 0,
                 initialValue: _select,
-                onCanceled: () {
-                  print('on canceled was called');
-                },
+                onCanceled: () {},
                 onSelected: _selectedItem,
                 color: Color(0xFF05966D), //Color(0xFF223645),
                 itemBuilder: (BuildContext context) {
@@ -167,10 +198,13 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           bottom: TabBar(
             controller: _tabController,
             indicatorColor: Colors.white,
+            labelStyle: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
             tabs: <Widget>[
               new Tab(text: "Saar yi"),
               new Tab(text: "Xaaj yi"),
-              new Tab(text: "Taneef"),
+              new Tab(text: "Tanneef"),
             ],
           )),
       body: new TabBarView(

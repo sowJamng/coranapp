@@ -139,7 +139,6 @@ class _ChatScreenState extends State<ChatScreen> {
           Parametres.lecteur.nom +
           widget.numero +
           '.mp3';
-    print(kurl);
   }
 
   void _saveSourate() async {
@@ -198,11 +197,11 @@ class _ChatScreenState extends State<ChatScreen> {
   Future stop(String url) async {
     await audioPlayer.stop();
 
-    this.play(url);
-    setState(() {
-      //playerState = PlayerState.playing;
-      isplay = true;
-    });
+    // this.play(url);
+    // setState(() {
+    //   //playerState = PlayerState.playing;
+    //   isplay = true;
+    // });
   }
 
   Future pause() async {
@@ -227,7 +226,7 @@ class _ChatScreenState extends State<ChatScreen> {
     });
   }
 
-  void _save(index) async {
+  Future _save(index) async {
     //favorie.date=DateFormat.yMMMd().format(DateTime.now());
     intl_local_date_data.initializeDateFormatting();
     var formatter = new DateFormat("yyyy-MM-dd'T'HH:mm:ss", 'en');
@@ -240,13 +239,14 @@ class _ChatScreenState extends State<ChatScreen> {
     favor.setNumverset(widget.sourate.versets[index].getNumv());
     favor.setNomsourate(widget.sourate.getNom());
     favor.setNumsourate(widget.sourate.getNumero());
-    favor.setOntap(0);
+    favor.setOntap(1);
     //il faut signaler que ce verset est deja ajouté aux favori
 
     if (await helper.exist(favor.getNumverset(), favor.getNumsourate()) ==
         false) {
+      _showSnackBar(context, 'Laaya $index Dugg na ca tànnef ya ak jàmm');
       await helper.insertFavori(favor);
-
+      setState(() {});
       //  if(helper.insertFavori(favor)!=0)
       //  _showAletDialog('Statut', 'Verset ajouté aux favories avec succés');
       // else
@@ -348,9 +348,7 @@ class _ChatScreenState extends State<ChatScreen> {
           PopupMenuButton<MyPopupItem>(
               elevation: 8.0,
               initialValue: _select,
-              onCanceled: () {
-                print('on canceled was called');
-              },
+              onCanceled: () {},
               onSelected: _selectedItem,
               color: Color(0xFF223645),
               itemBuilder: (BuildContext context) {
@@ -407,7 +405,12 @@ class _ChatScreenState extends State<ChatScreen> {
                         final verset = versetsearch[
                             index]; //widget.sourate.versets[index];
                         final numero = index + 1;
-
+                        Allfavories favor = new Allfavories();
+                        favor.setNumverset(
+                            widget.sourate.versets[index].getNumv());
+                        favor.setNumsourate(widget.sourate.getNumero());
+                        Future<bool> f = helper.exist(
+                            favor.getNumverset(), favor.getNumsourate());
                         String vr = 'https://everyayah.com/data/' +
                             Parametres.lecteur.ayabyaya +
                             widget.numero +
@@ -527,31 +530,34 @@ class _ChatScreenState extends State<ChatScreen> {
                                   children: <Widget>[
                                     IconButton(
                                         icon: Icon(
-                                          Icons.play_arrow,
+                                          isPlaying
+                                              ? Icons.pause_circle_outline
+                                              : Icons.play_arrow,
                                           color: Colors.green,
                                         ), //isplay?Icon(Icons.pause_circle_outline,color:Colors.indigo):Icon(Icons.play_arrow,color: Colors.green,),
                                         onPressed: () {
-                                          print(vr);
-
                                           isPlaying
                                               ? stop(vr)
                                               : play(vr); //playautomat(index);
                                         }),
+                                    // IconButton(
+                                    //   icon: Icon(Icons.pause_circle_outline,
+                                    //       color: Colors
+                                    //           .indigo), //Color(0xFFE8582E)),
+                                    //   onPressed:
+                                    //       isPlaying ? () => pause() : null,
+                                    // ),
                                     IconButton(
-                                      icon: Icon(Icons.pause_circle_outline,
-                                          color: Colors
-                                              .indigo), //Color(0xFFE8582E)),
-                                      onPressed:
-                                          isPlaying ? () => pause() : null,
-                                    ),
-                                    IconButton(
-                                        icon: favori,
+                                        icon: (index ==
+                                                (favor.getNumverset() - 1))
+                                            ? favori
+                                            : addfavori,
                                         color: Colors.indigo,
                                         onPressed: () {
                                           setState(() {
                                             _save(index);
                                             _showSnackBar(context,
-                                                'Verset ${verset.numv} Dugg na ca tànnef ya ak jàmm');
+                                                'Laaya ${verset.numv} Dugg na ca tànnef ya ak jàmm');
                                           });
                                         }),
                                     Builder(

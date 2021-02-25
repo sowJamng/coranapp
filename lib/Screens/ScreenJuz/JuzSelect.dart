@@ -211,9 +211,7 @@ class _JusSelectState extends State<JusSelect> {
           PopupMenuButton<MyPopupItem>(
               elevation: 2.0,
               initialValue: _select,
-              onCanceled: () {
-                print('on canceled was called');
-              },
+              onCanceled: () {},
               onSelected: _selectedItem,
               color: Color(0xFF223645),
               itemBuilder: (BuildContext context) {
@@ -359,7 +357,6 @@ class _JusSelectState extends State<JusSelect> {
                                           ),
                                           //onPressed: () => isplay?pause():play(vr)//isPlaying ? stop(vr):playautomat(verset.numv),
                                           onPressed: () {
-                                            print(vr);
                                             isPlaying ? stop(vr) : play(vr);
                                           }),
                                       IconButton(

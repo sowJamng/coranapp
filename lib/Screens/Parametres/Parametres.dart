@@ -44,7 +44,7 @@ class _ParametresState extends State<Parametres> {
       appBar: AppBar(
         //05966D a pr
         backgroundColor: Color(0xFF05966D),
-        title: Text('Parametres'),
+        title: Text('Jagal yi'),
       ),
       body: Container(
         child: Column(
