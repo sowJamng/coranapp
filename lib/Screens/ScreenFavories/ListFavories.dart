@@ -255,7 +255,7 @@ class _ListFavoriesState extends State<ListFavories> {
       favorieFutureList.then((favoriLists) {
         setState(() {
           this.favorilists = favoriLists;
-          this.count = favoriLists.length;
+          this.count = favorilists.length;
         });
       });
     });

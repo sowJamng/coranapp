@@ -240,20 +240,14 @@ class _ChatScreenState extends State<ChatScreen> {
     favor.setNomsourate(widget.sourate.getNom());
     favor.setNumsourate(widget.sourate.getNumero());
     favor.setOntap(1);
+
     //il faut signaler que ce verset est deja ajouté aux favori
 
     if (await helper.exist(favor.getNumverset(), favor.getNumsourate()) ==
         false) {
-      _showSnackBar(context, 'Laaya $index Dugg na ca tànnef ya ak jàmm');
       await helper.insertFavori(favor);
-      setState(() {});
-      //  if(helper.insertFavori(favor)!=0)
-      //  _showAletDialog('Statut', 'Verset ajouté aux favories avec succés');
-      // else
-      //  _showAletDialog('Statut', 'Problem d\'Ajout aux favories');
-    } else
-      _showSnackBar(context,
-          'Verset ${favor.getNumverset()} Xas na dugg na ca Tànnef yi');
+      _showSnackBar(context, 'Laaya $index Dugg na ca tànnef ya ak jàmm');
+    }
   }
 
   void _showSnackBar(BuildContext context, String message) {
