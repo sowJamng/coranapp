@@ -72,9 +72,10 @@ List<MesSourates> mesSourates = [
       sourate: maIda,
       lieu: 'Màddina'),
   MesSourates(
-      numero: "/006", nbaya: 'Màkka - 165 Laaya', sourate: anam, lieu: 'Màkka'),
+      numero: "/006", 
+      nbaya: 'Màkka - 165i Laaya', sourate: anam, lieu: 'Màkka'),
   MesSourates(
-      numero: "/007", nbaya: 'Màkka - 206 Laaya', sourate: araf, lieu: 'Màkka'),
+      numero: "/007", nbaya: 'Màkka - 206i Laaya', sourate: araf, lieu: 'Màkka'),
   MesSourates(
       numero: "/008",
       nbaya: 'Màddina - 75i Laaya',

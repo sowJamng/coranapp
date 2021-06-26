@@ -211,7 +211,7 @@ List<Sourate> sourates = [
   maryam,
   taha
 ];
-// je me suis aussi arrete au sourate 7 verset 71
+
 //SOURATE éç verset 56 et  57 58 59 60 ....
 // sourate 30 : 21 A 25
 // souratee 57 au ebut
@@ -224,7 +224,7 @@ List<Sourate> sourates = [
 // sourate 29 verset 57
 // sourate 24 verset 56
 // sourte taha (20) parle sur moussa
-//sourate 9 verset 81 a revoir sur larabe
+// 9 verset 81 a revoir sur larabe
 
 Sourate fatiya = Sourate(
   numero: 1,
@@ -283,7 +283,8 @@ Sourate fatiya = Sourate(
         wolof: "yoonu ñi Nga xéewale, wuuteek ñi Nga mere ak ñi réer.")
   ],
 );
-Sourate baqara = Sourate(
+Sourate baqara = 
+Sourate(
     numero: 2,
     nom: "Nag Wa",
     nbaya: '286',
@@ -426,14 +427,14 @@ Sourate baqara = Sourate(
       Verset(
           numv: 16,
           numero: '016',
-          arabe: "صُمٌّ بُكْمٌ عُمْيٌ فَهُمْ لَا يَرْجِعُونَ ",
+          arabe: "",
           francais: " Şummun Bukmun `Umyun Fahum Lā Yarji`ūna",
           wolof: "Dañoo tëx, luu, gumba, ba duñu mën a dellusi (cig njub). "),
       Verset(
           numv: 17,
           numero: '017',
           arabe:
-              "أَوْ كَصَيِّبٍ مِّنَ السَّمَاءِ فِيهِ ظُلُمَاتٌ وَرَعْدٌ وَبَرْقٌ يَجْعَلُونَ أَصَابِعَهُمْ فِي آذَانِهِم مِّنَ الصَّوَاعِقِ حَذَرَ الْمَوْتِ ۚ وَاللَّهُ مُحِيطٌ بِالْكَافِرِينَ ",
+              " مَثَلُهُمْ كَمَثَلِ ٱلَّذِى ٱسْتَوْقَدَ نَارًۭا فَلَمَّآ أَضَآءَتْ مَا حَوْلَهُۥ ذَهَبَ ٱللَّهُ بِنُورِهِمْ وَتَرَكَهُمْ فِى ظُلُمَٰتٍۢ لَّا يُبْصِرُونَ ",
           francais:
               " 'Aw Kaşayyibin Mina As-Samā'i Fīhi Žulumātun Wa Ra`dun Wa Barqun Yaj`alūna 'Aşābi`ahum Fī 'Ādhānihim Mina Aş-Şawā`iqi hadhara Al-Mawti Wa Allāhu Muhīţun Bil-Kāfirīna",
           wolof:
@@ -442,7 +443,8 @@ Sourate baqara = Sourate(
           numv: 18,
           numero: '018',
           arabe:
-              "يَكَادُ الْبَرْقُ يَخْطَفُ أَبْصَارَهُمْ ۖ كُلَّمَا أَضَاءَ لَهُم مَّشَوْا فِيهِ وَإِذَا أَظْلَمَ عَلَيْهِمْ قَامُوا ۚ وَلَوْ شَاءَ اللَّهُ لَذَهَبَ بِسَمْعِهِمْ وَأَبْصَارِهِمْ ۚ إِنَّ اللَّهَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ  ",
+              " صُمٌّۢ بُكْمٌ عُمْىٌۭ فَهُمْ لَا يَرْجِعُونَ
+ ",
           francais:
               " Yakādu Al-Barqu Yakhţafu 'Abşārahum Kullamā 'Ađā'a Lahum Mashaw Fīhi Wa 'Idhā 'Ažlama `Alayhim Qāmū Wa Law Shā'a Allāhu Ladhahaba Bisam`ihim Wa 'Abşārihim 'Inna Allāha `Alá Kulli Shay'in Qadīrun",
           wolof:
@@ -451,7 +453,7 @@ Sourate baqara = Sourate(
           numv: 19,
           numero: '019',
           arabe:
-              "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ وَالَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ ",
+              "أَوْ كَصَيِّبٍۢ مِّنَ ٱلسَّمَآءِ فِيهِ ظُلُمَٰتٌۭ وَرَعْدٌۭ وَبَرْقٌۭ يَجْعَلُونَ أَصَٰبِعَهُمْ فِىٓ ءَاذَانِهِم مِّنَ ٱلصَّوَٰعِقِ حَذَرَ ٱلْمَوْتِ ۚ وَٱللَّهُ مُحِيطٌۢ بِٱلْكَٰفِرِينَ",
           francais:
               " Yā 'Ayyuhā An-Nāsu A`budū Rabbakumu Al-Ladhī Khalaqakum Wa Al-Ladhīna Min Qablikum La`allakum Tattaqūna",
           wolof:
@@ -460,7 +462,7 @@ Sourate baqara = Sourate(
           numv: 20,
           numero: '020',
           arabe:
-              "الَّذِي جَعَلَ لَكُمُ الْأَرْضَ فِرَاشًا وَالسَّمَاءَ بِنَاءً وَأَنزَلَ مِنَ السَّمَاءِ مَاءً فَأَخْرَجَ بِهِ مِنَ الثَّمَرَاتِ رِزْقًا لَّكُمْ ۖ فَلَا تَجْعَلُوا لِلَّهِ أَندَادًا وَأَنتُمْ تَعْلَمُونَ ",
+              " يَكَادُ ٱلْبَرْقُ يَخْطَفُ أَبْصَٰرَهُمْ ۖ كُلَّمَآ أَضَآءَ لَهُم مَّشَوْا۟ فِيهِ وَإِذَآ أَظْلَمَ عَلَيْهِمْ قَامُوا۟ ۚ وَلَوْ شَآءَ ٱللَّهُ لَذَهَبَ بِسَمْعِهِمْ وَأَبْصَٰرِهِمْ ۚ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ ",
           francais:
               " Al-Ladhī Ja`ala Lakumu Al-'Arđa Firāshāan Wa As-Samā'a Binā'an Wa 'Anzala Mina As-Samā'i Mā'an Fa'akhraja Bihi Mina Ath-Thamarāti Rizqāan Lakum Falā Taj`alū Lillāhi 'Andādāan Wa 'Antum Ta`lamūna",
           wolof:
@@ -469,7 +471,7 @@ Sourate baqara = Sourate(
           numv: 21,
           numero: '021',
           arabe:
-              "وَإِن كُنتُمْ فِي رَيْبٍ مِّمَّا نَزَّلْنَا عَلَىٰ عَبْدِنَا فَأْتُوا بِسُورَةٍ مِّن مِّثْلِهِ وَادْعُوا شُهَدَاءَكُم مِّن دُونِ اللَّهِ إِن كُنتُمْ صَادِقِينَ ",
+              "يَٰٓأَيُّهَا ٱلنَّاسُ ٱعْبُدُوا۟ رَبَّكُمُ ٱلَّذِى خَلَقَكُمْ وَٱلَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ",
           francais:
               "Wa 'In Kuntum Fī Raybin Mimmā Nazzalnā `Alá `Abdinā Fa'tū Bisūratin Min Mithlihi Wa Ad`ū Shuhadā'akum Min Dūni Allāhi 'In Kuntum Şādiqīna",
           wolof:
@@ -478,7 +480,7 @@ Sourate baqara = Sourate(
           numv: 22,
           numero: '022',
           arabe:
-              'فَإِن لَّمْ تَفْعَلُوا وَلَن تَفْعَلُوا فَاتَّقُوا النَّارَ الَّتِي وَقُودُهَا النَّاسُ وَالْحِجَارَةُ ۖ أُعِدَّتْ لِلْكَافِرِينَ ',
+              'ٱلَّذِى جَعَلَ لَكُمُ ٱلْأَرْضَ فِرَٰشًۭا وَٱلسَّمَآءَ بِنَآءًۭ وَأَنزَلَ مِنَ ٱلسَّمَآءِ مَآءًۭ فَأَخْرَجَ بِهِۦ مِنَ ٱلثَّمَرَٰتِ رِزْقًۭا لَّكُمْ ۖ فَلَا تَجْعَلُوا۟ لِلَّهِ أَندَادًۭا وَأَنتُمْ تَعْلَمُونَ ',
           francais:
               " Fa'in Lam Taf`alū Wa Lan Taf`alū Fa Attaqū An-Nāra Allatī Waqūduhā An-Nāsu Wa Al-hijāratu 'U`iddat Lilkāfirīna",
           wolof:
@@ -487,7 +489,7 @@ Sourate baqara = Sourate(
           numv: 23,
           numero: '023',
           arabe:
-              "وَبَشِّرِ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ أَنَّ لَهُمْ جَنَّاتٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ ۖ كُلَّمَا رُزِقُوا مِنْهَا مِن ثَمَرَةٍ رِّزْقًا ۙ قَالُوا هَٰذَا الَّذِي رُزِقْنَا مِن قَبْلُ ۖ وَأُتُوا بِهِ مُتَشَابِهًا ۖ وَلَهُمْ فِيهَا أَزْوَاجٌ مُّطَهَّرَةٌ ۖ وَهُمْ فِيهَا خَالِدُونَ  ",
+              " وَإِن كُنتُمْ فِى رَيْبٍۢ مِّمَّا نَزَّلْنَا عَلَىٰ عَبْدِنَا فَأْتُوا۟ بِسُورَةٍۢ مِّن مِّثْلِهِۦ وَٱدْعُوا۟ شُهَدَآءَكُم مِّن دُونِ ٱللَّهِ إِن كُنتُمْ صَٰدِقِينَ",
           francais:
               " Wa Bashiri Al-Ladhīna 'Āmanū Wa `Amilū Aş-Şālihāti 'Anna Lahum Jannātin Tajrī Min Tahtihā Al-'Anhāru Kullamā Ruziqū Minhā Min Thamaratin Rizqāan Qālū Hādhā Al-Ladhī Ruziqnā Min Qablu Wa 'Utū Bihi Mutashābihāan Wa Lahum Fīhā 'Azwājun Muţahharatun Wa Hum Fīhā Khālidūna",
           wolof:
@@ -496,7 +498,7 @@ Sourate baqara = Sourate(
           numv: 24,
           numero: '024',
           arabe:
-              "إِنَّ اللَّهَ لَا يَسْتَحْيِي أَن يَضْرِبَ مَثَلًا مَّا بَعُوضَةً فَمَا فَوْقَهَا ۚ فَأَمَّا الَّذِينَ آمَنُوا فَيَعْلَمُونَ أَنَّهُ الْحَقُّ مِن رَّبِّهِمْ ۖ وَأَمَّا الَّذِينَ كَفَرُوا فَيَقُولُونَ مَاذَا أَرَادَ اللَّهُ بِهَٰذَا مَثَلًا ۘ يُضِلُّ بِهِ كَثِيرًا وَيَهْدِي بِهِ كَثِيرًا ۚ وَمَا يُضِلُّ بِهِ إِلَّا الْفَاسِقِينَ  ",
+              "فَإِن لَّمْ تَفْعَلُوا۟ وَلَن تَفْعَلُوا۟ فَٱتَّقُوا۟ ٱلنَّارَ ٱلَّتِى وَقُودُهَا ٱلنَّاسُ وَٱلْحِجَارَةُ ۖ أُعِدَّتْ لِلْكَٰفِرِينَ",
           francais:
               " 'Inna Allāha Lā Yastahyī 'An Yađriba Mathalāan Mā Ba`ūđatan Famā Fawqahā Fa'ammā Al-Ladhīna 'Āmanū Faya`lamūna 'Annahu Al-haqqu Min Rabbihim Wa 'Ammā Al-Ladhīna Kafarū Fayaqūlūna Mādhā 'Arāda Allāhu Bihadhā Mathalāan Yuđillu Bihi Kathīrāan Wa Yahdī Bihi Kathīrāan Wa Mā Yuđillu Bihi 'Illā Al-Fāsiqīna",
           wolof:
@@ -505,7 +507,7 @@ Sourate baqara = Sourate(
           numv: 25,
           numero: '025',
           arabe:
-              "الَّذِينَ يَنقُضُونَ عَهْدَ اللَّهِ مِن بَعْدِ مِيثَاقِهِ وَيَقْطَعُونَ مَا أَمَرَ اللَّهُ بِهِ أَن يُوصَلَ وَيُفْسِدُونَ فِي الْأَرْضِ ۚ أُولَٰئِكَ هُمُ الْخَاسِرُونَ ",
+              " وَبَشِّرِ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ أَنَّ لَهُمْ جَنَّٰتٍۢ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَٰرُ ۖ كُلَّمَا رُزِقُوا۟ مِنْهَا مِن ثَمَرَةٍۢ رِّزْقًۭا ۙ قَالُوا۟ هَٰذَا ٱلَّذِى رُزِقْنَا مِن قَبْلُ ۖ وَأُتُوا۟ بِهِۦ مُتَشَٰبِهًۭا ۖ وَلَهُمْ فِيهَآ أَزْوَٰجٌۭ مُّطَهَّرَةٌۭ ۖ وَهُمْ فِيهَا خَٰلِدُونَ ",
           francais:
               "Al-Ladhīna Yanquđūna `Ahda Allāhi Min Ba`di Mīthāqihi Wa Yaqţa`ūna Mā 'Amara Allāhu Bihi 'An Yūşala Wa Yufsidūna Fī Al-'Arđi 'Ūlā'ika Humu Al-Khāsirūna",
           wolof:
@@ -514,7 +516,7 @@ Sourate baqara = Sourate(
           numv: 26,
           numero: '026',
           arabe:
-              "كَيْفَ تَكْفُرُونَ بِاللَّهِ وَكُنتُمْ أَمْوَاتًا فَأَحْيَاكُمْ ۖ ثُمَّ يُمِيتُكُمْ ثُمَّ يُحْيِيكُمْ ثُمَّ إِلَيْهِ تُرْجَعُونَ ",
+              "  إِنَّ ٱللَّهَ لَا يَسْتَحْىِۦٓ أَن يَضْرِبَ مَثَلًۭا مَّا بَعُوضَةًۭ فَمَا فَوْقَهَا ۚ فَأَمَّا ٱلَّذِينَ ءَامَنُوا۟ فَيَعْلَمُونَ أَنَّهُ ٱلْحَقُّ مِن رَّبِّهِمْ ۖ وَأَمَّا ٱلَّذِينَ كَفَرُوا۟ فَيَقُولُونَ مَاذَآ أَرَادَ ٱللَّهُ بِهَٰذَا مَثَلًۭا ۘ يُضِلُّ بِهِۦ كَثِيرًۭا وَيَهْدِى بِهِۦ كَثِيرًۭا ۚ وَمَا يُضِلُّ بِهِۦٓ إِلَّا ٱلْفَٰسِقِينَ",
           francais:
               " Kayfa Takfurūna Billāhi Wa Kuntum 'Amwātāan Fa'ahyākum Thumma Yumītukum Thumma Yuhyīkum Thumma 'Ilayhi Turja`ūna",
           wolof:
@@ -523,7 +525,7 @@ Sourate baqara = Sourate(
           numv: 27,
           numero: '027',
           arabe:
-              "هُوَ الَّذِي خَلَقَ لَكُم مَّا فِي الْأَرْضِ جَمِيعًا ثُمَّ اسْتَوَىٰ إِلَى السَّمَاءِ فَسَوَّاهُنَّ سَبْعَ سَمَاوَاتٍ ۚ وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ ",
+              " ٱلَّذِينَ يَنقُضُونَ عَهْدَ ٱللَّهِ مِنۢ بَعْدِ مِيثَٰقِهِۦ وَيَقْطَعُونَ مَآ أَمَرَ ٱللَّهُ بِهِۦٓ أَن يُوصَلَ وَيُفْسِدُونَ فِى ٱلْأَرْضِ ۚ أُو۟لَٰٓئِكَ هُمُ ٱلْخَٰسِرُونَ",
           francais:
               " Huwa Al-Ladhī Khalaqa Lakum Mā Fī Al-'Arđi Jamī`āan Thumma Astawá 'Ilá As-Samā'i Fasawwāhunna Sab`a Samāwātin Wa Huwa Bikulli Shay'in `Alīmun",
           wolof:
@@ -532,7 +534,7 @@ Sourate baqara = Sourate(
           numv: 28,
           numero: '028',
           arabe:
-              "وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً ۖ قَالُوا أَتَجْعَلُ فِيهَا مَن يُفْسِدُ فِيهَا وَيَسْفِكُ الدِّمَاءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ ۖ قَالَ إِنِّي أَعْلَمُ مَا لَا تَعْلَمُونَ  ",
+              "كَيْفَ تَكْفُرُونَ بِٱللَّهِ وَكُنتُمْ أَمْوَٰتًۭا فَأَحْيَٰكُمْ ۖ ثُمَّ يُمِيتُكُمْ ثُمَّ يُحْيِيكُمْ ثُمَّ إِلَيْهِ تُرْجَعُونَ",
           francais:
               "Wa 'Idh Qāla Rabbuka Lilmalā'ikati 'Innī Jā`ilun Fī Al-'Arđi Khalīfatan Qālū 'Ataj`alu Fīhā Man Yufsidu Fīhā Wa Yasfiku Ad-Dimā'a Wa Nahnu Nusabbihu Bihamdika Wa Nuqaddisu Laka Qāla 'Innī 'A`lamu Mā Lā Ta`lamūna",
           wolof:
@@ -541,7 +543,7 @@ Sourate baqara = Sourate(
           numv: 29,
           numero: '029',
           arabe:
-              "وَعَلَّمَ آدَمَ الْأَسْمَاءَ كُلَّهَا ثُمَّ عَرَضَهُمْ عَلَى الْمَلَائِكَةِ فَقَالَ أَنبِئُونِي بِأَسْمَاءِ هَٰؤُلَاءِ إِن كُنتُمْ صَادِقِينَ ",
+              "هُوَ ٱلَّذِى خَلَقَ لَكُم مَّا فِى ٱلْأَرْضِ جَمِيعًۭا ثُمَّ ٱسْتَوَىٰٓ إِلَى ٱلسَّمَآءِ فَسَوَّىٰهُنَّ سَبْعَ سَمَٰوَٰتٍۢ ۚ وَهُوَ بِكُلِّ شَىْءٍ عَلِيمٌۭ",
           francais:
               "Wa `Allama 'Ādama Al-'Asmā'a Kullahā Thumma `Arađahum `Alá Al-Malā'ikati Faqāla 'Anbi'ūnī Bi'asmā'i Hā'uulā' 'In Kuntum Şādiqīna",
           wolof:
@@ -550,7 +552,7 @@ Sourate baqara = Sourate(
           numv: 30,
           numero: '030',
           arabe:
-              "قَالُوا سُبْحَانَكَ لَا عِلْمَ لَنَا إِلَّا مَا عَلَّمْتَنَا ۖ إِنَّكَ أَنتَ الْعَلِيمُ الْحَكِيمُ ",
+              " وَإِذْ قَالَ رَبُّكَ لِلْمَلَٰٓئِكَةِ إِنِّى جَاعِلٌۭ فِى ٱلْأَرْضِ خَلِيفَةًۭ ۖ قَالُوٓا۟ أَتَجْعَلُ فِيهَا مَن يُفْسِدُ فِيهَا وَيَسْفِكُ ٱلدِّمَآءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ ۖ قَالَ إِنِّىٓ أَعْلَمُ مَا لَا تَعْلَمُونَ",
           francais:
               " Qālū Subhānaka Lā `Ilma Lanā 'Illā Mā `Allamtanā 'Innaka 'Anta Al-`Alīmu Al-hakīmu",
           wolof:
@@ -559,7 +561,7 @@ Sourate baqara = Sourate(
           numv: 31,
           numero: '031',
           arabe:
-              "قَالَ يَا آدَمُ أَنبِئْهُم بِأَسْمَائِهِمْ ۖ فَلَمَّا أَنبَأَهُم بِأَسْمَائِهِمْ قَالَ أَلَمْ أَقُل لَّكُمْ إِنِّي أَعْلَمُ غَيْبَ السَّمَاوَاتِ وَالْأَرْضِ وَأَعْلَمُ مَا تُبْدُونَ وَمَا كُنتُمْ تَكْتُمُونَ  ",
+              " وَعَلَّمَ ءَادَمَ ٱلْأَسْمَآءَ كُلَّهَا ثُمَّ عَرَضَهُمْ عَلَى ٱلْمَلَٰٓئِكَةِ فَقَالَ أَنۢبِـُٔونِى بِأَسْمَآءِ هَٰٓؤُلَآءِ إِن كُنتُمْ صَٰدِقِينَ ",
           francais:
               " Qāla Yā 'Ādamu 'Anbi'hum Bi'asmā'ihim Falammā 'Anba'ahum Bi'asmā'ihim Qāla 'Alam 'Aqul Lakum 'Innī 'A`lamu Ghayba As-Samāwāti Wa Al-'Arđi Wa 'A`lamu Mā Tubdūna Wa Mā Kuntum Taktumūna",
           wolof:
@@ -568,7 +570,7 @@ Sourate baqara = Sourate(
           numv: 32,
           numero: '032',
           arabe:
-              "وَإِذْ قُلْنَا لِلْمَلَائِكَةِ اسْجُدُوا لِآدَمَ فَسَجَدُوا إِلَّا إِبْلِيسَ أَبَىٰ وَاسْتَكْبَرَ وَكَانَ مِنَ الْكَافِرِينَ ",
+              " قَالُوا۟ سُبْحَٰنَكَ لَا عِلْمَ لَنَآ إِلَّا مَا عَلَّمْتَنَآ ۖ إِنَّكَ أَنتَ ٱلْعَلِيمُ ٱلْحَكِيمُ",
           francais:
               " Wa 'Idh Qulnā Lilmalā'ikati Asjudū Li'dama Fasajadū 'Illā 'Iblīsa 'Abá Wa Astakbara Wa Kāna Mina Al-Kāfirīna",
           wolof:
@@ -577,7 +579,7 @@ Sourate baqara = Sourate(
           numv: 33,
           numero: '033',
           arabe:
-              "وَقُلْنَا يَا آدَمُ اسْكُنْ أَنتَ وَزَوْجُكَ الْجَنَّةَ وَكُلَا مِنْهَا رَغَدًا حَيْثُ شِئْتُمَا وَلَا تَقْرَبَا هَٰذِهِ الشَّجَرَةَ فَتَكُونَا مِنَ الظَّالِمِينَ ",
+              " قَالَ يَٰٓـَٔادَمُ أَنۢبِئْهُم بِأَسْمَآئِهِمْ ۖ فَلَمَّآ أَنۢبَأَهُم بِأَسْمَآئِهِمْ قَالَ أَلَمْ أَقُل لَّكُمْ إِنِّىٓ أَعْلَمُ غَيْبَ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ وَأَعْلَمُ مَا تُبْدُونَ وَمَا كُنتُمْ تَكْتُمُونَ ",
           francais:
               " Wa Qulnā Yā 'Ādamu Askun 'Anta Wa Zawjuka Al-Jannata Wa Kulā Minhā Raghadāan haythu Shi'tumā Wa Lā Taqrabā Hadhihi Ash-Shajarata Fatakūnā Mina Až-Žālimīna",
           wolof:
@@ -586,7 +588,7 @@ Sourate baqara = Sourate(
           numv: 34,
           numero: '034',
           arabe:
-              "فَأَزَلَّهُمَا الشَّيْطَانُ عَنْهَا فَأَخْرَجَهُمَا مِمَّا كَانَا فِيهِ ۖ وَقُلْنَا اهْبِطُوا بَعْضُكُمْ لِبَعْضٍ عَدُوٌّ ۖ وَلَكُمْ فِي الْأَرْضِ مُسْتَقَرٌّ وَمَتَاعٌ إِلَىٰ حِينٍ ",
+              "وَإِذْ قُلْنَا لِلْمَلَٰٓئِكَةِ ٱسْجُدُوا۟ لِءَادَمَ فَسَجَدُوٓا۟ إِلَّآ إِبْلِيسَ أَبَىٰ وَٱسْتَكْبَرَ وَكَانَ مِنَ ٱلْكَٰفِرِينَ",
           francais:
               "Fa'azallahumā Ash-Shayţānu `Anhā Fa'akhrajahumā Mimmā Kānā Fīhi Wa Qulnā Ahbiţū Ba`đukum Liba`đin `Adūwun Wa Lakum Fī Al-'Arđi Mustaqarrun Wa Matā`un 'Ilá hīnin",
           wolof:
@@ -595,7 +597,7 @@ Sourate baqara = Sourate(
           numv: 35,
           numero: '035',
           arabe:
-              "فَتَلَقَّىٰ آدَمُ مِن رَّبِّهِ كَلِمَاتٍ فَتَابَ عَلَيْهِ ۚ إِنَّهُ هُوَ التَّوَّابُ الرَّحِيمُ ",
+              " وَقُلْنَا يَٰٓـَٔادَمُ ٱسْكُنْ أَنتَ وَزَوْجُكَ ٱلْجَنَّةَ وَكُلَا مِنْهَا رَغَدًا حَيْثُ شِئْتُمَا وَلَا تَقْرَبَا هَٰذِهِ ٱلشَّجَرَةَ فَتَكُونَا مِنَ ٱلظَّٰلِمِينَ",
           francais:
               "Fatalaqqá 'Ādamu Min Rabbihi Kalimātin Fatāba `Alayhi 'Innahu Huwa At-Tawwābu Ar-Rahīmu",
           wolof:
@@ -604,7 +606,7 @@ Sourate baqara = Sourate(
           numv: 36,
           numero: '036',
           arabe:
-              "قُلْنَا اهْبِطُوا مِنْهَا جَمِيعًا ۖ فَإِمَّا يَأْتِيَنَّكُم مِّنِّي هُدًى فَمَن تَبِعَ هُدَايَ فَلَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ ",
+              " فَأَزَلَّهُمَا ٱلشَّيْطَٰنُ عَنْهَا فَأَخْرَجَهُمَا مِمَّا كَانَا فِيهِ ۖ وَقُلْنَا ٱهْبِطُوا۟ بَعْضُكُمْ لِبَعْضٍ عَدُوٌّۭ ۖ وَلَكُمْ فِى ٱلْأَرْضِ مُسْتَقَرٌّۭ وَمَتَٰعٌ إِلَىٰ حِينٍۢ ",
           francais:
               " Qulnā Ahbiţū Minhā Jamī`āan Fa'immā Ya'tiyannakum Minnī Hudáan Faman Tabi`a Hudāya Falā Khawfun `Alayhim Wa Lā Hum Yahzanūna",
           wolof:
@@ -613,7 +615,8 @@ Sourate baqara = Sourate(
           numv: 37,
           numero: '037',
           arabe:
-              "وَالَّذِينَ كَفَرُوا وَكَذَّبُوا بِآيَاتِنَا أُولَٰئِكَ أَصْحَابُ النَّارِ ۖ هُمْ فِيهَا خَالِدُونَ ",
+              "فَتَلَقَّىٰٓ ءَادَمُ مِن رَّبِّهِۦ كَلِمَٰتٍۢ فَتَابَ عَلَيْهِ ۚ إِنَّهُۥ هُوَ ٱلتَّوَّابُ ٱلرَّحِيمُ
+",
           francais:
               " Wa Al-Ladhīna Kafarū Wa Kadhabū Bi'āyātinā 'Ūlā'ika 'Aşhābu An-Nāri Hum Fīhā Khālidūna",
           wolof:
@@ -622,7 +625,7 @@ Sourate baqara = Sourate(
           numv: 38,
           numero: '038',
           arabe:
-              "يَا بَنِي إِسْرَائِيلَ اذْكُرُوا نِعْمَتِيَ الَّتِي أَنْعَمْتُ عَلَيْكُمْ وَأَوْفُوا بِعَهْدِي أُوفِ بِعَهْدِكُمْ وَإِيَّايَ فَارْهَبُونِ ",
+              "قُلْنَا ٱهْبِطُوا۟ مِنْهَا جَمِيعًۭا ۖ فَإِمَّا يَأْتِيَنَّكُم مِّنِّى هُدًۭى فَمَن تَبِعَ هُدَاىَ فَلَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ",
           francais:
               " Yā Banī 'Isrā'īla Adhkurū Ni`matiya Allatī 'An`amtu `Alaykum Wa 'Awfū Bi`ahdī 'Ūfi Bi`ahdikum Wa 'Īyāya Fārhabūni",
           wolof:
@@ -631,7 +634,7 @@ Sourate baqara = Sourate(
           numv: 39,
           numero: '039',
           arabe:
-              "وَآمِنُوا بِمَا أَنزَلْتُ مُصَدِّقًا لِّمَا مَعَكُمْ وَلَا تَكُونُوا أَوَّلَ كَافِرٍ بِهِ ۖ وَلَا تَشْتَرُوا بِآيَاتِي ثَمَنًا قَلِيلًا وَإِيَّايَ فَاتَّقُونِ ",
+              "وَٱلَّذِينَ كَفَرُوا۟ وَكَذَّبُوا۟ بِـَٔايَٰتِنَآ أُو۟لَٰٓئِكَ أَصْحَٰبُ ٱلنَّارِ ۖ هُمْ فِيهَا خَٰلِدُونَ",
           francais:
               "Wa 'Āminū Bimā 'Anzaltu Muşaddiqāan Limā Ma`akum Wa Lā Takūnū 'Awwala Kāfirin Bihi Wa Lā Tashtarū Bi'āyātī Thamanāan Qalīlāan Wa 'Īyāya Fa Attaqūni",
           wolof:
@@ -640,7 +643,7 @@ Sourate baqara = Sourate(
           numv: 40,
           numero: '040',
           arabe:
-              "وَلَا تَلْبِسُوا الْحَقَّ بِالْبَاطِلِ وَتَكْتُمُوا الْحَقَّ وَأَنتُمْ تَعْلَمُونَ ",
+              "يَٰبَنِىٓ إِسْرَٰٓءِيلَ ٱذْكُرُوا۟ نِعْمَتِىَ ٱلَّتِىٓ أَنْعَمْتُ عَلَيْكُمْ وَأَوْفُوا۟ بِعَهْدِىٓ أُوفِ بِعَهْدِكُمْ وَإِيَّٰىَ فَٱرْهَبُونِ",
           francais:
               "Wa Lā Talbisū Al-haqqa Bil-Bāţili Wa Taktumū Al-haqqa Wa 'Antum Ta`lamūna",
           wolof:
@@ -649,7 +652,7 @@ Sourate baqara = Sourate(
           numv: 41,
           numero: '041',
           arabe:
-              "وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَارْكَعُوا مَعَ الرَّاكِعِينَ ",
+              "وَءَامِنُوا۟ بِمَآ أَنزَلْتُ مُصَدِّقًۭا لِّمَا مَعَكُمْ وَلَا تَكُونُوٓا۟ أَوَّلَ كَافِرٍۭ بِهِۦ ۖ وَلَا تَشْتَرُوا۟ بِـَٔايَٰتِى ثَمَنًۭا قَلِيلًۭا وَإِيَّٰىَ فَٱتَّقُونِ",
           francais:
               " Wa 'Aqīmū Aş-Şalāata Wa 'Ātū Az-Zakāata Wa Arka`ū Ma`a Ar-Rāki`īna",
           wolof:
@@ -658,7 +661,7 @@ Sourate baqara = Sourate(
           numv: 42,
           numero: '042',
           arabe:
-              "أَتَأْمُرُونَ النَّاسَ بِالْبِرِّ وَتَنسَوْنَ أَنفُسَكُمْ وَأَنتُمْ تَتْلُونَ الْكِتَابَ ۚ أَفَلَا تَعْقِلُونَ ",
+              "وَلَا تَلْبِسُوا۟ ٱلْحَقَّ بِٱلْبَٰطِلِ وَتَكْتُمُوا۟ ٱلْحَقَّ وَأَنتُمْ تَعْلَمُونَ",
           francais:
               " 'Ata'murūna An-Nāsa Bil-Birri Wa Tansawna 'Anfusakum Wa 'Antum Tatlūna Al-Kitāba 'Afalā Ta`qilūna",
           wolof:
@@ -667,7 +670,7 @@ Sourate baqara = Sourate(
           numv: 43,
           numero: '043',
           arabe:
-              "وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ ۚ وَإِنَّهَا لَكَبِيرَةٌ إِلَّا عَلَى الْخَاشِعِينَ ",
+              "وَأَقِيمُوا۟ ٱلصَّلَوٰةَ وَءَاتُوا۟ ٱلزَّكَوٰةَ وَٱرْكَعُوا۟ مَعَ ٱلرَّٰكِعِينَ",
           francais:
               "Wa Asta`īnū Biş-Şabri Wa Aş-Şalāati Wa 'Innahā Lakabīratun 'Illā `Alá Al-Khāshi`īna",
           wolof:
@@ -676,7 +679,7 @@ Sourate baqara = Sourate(
           numv: 44,
           numero: '044',
           arabe:
-              "الَّذِينَ يَظُنُّونَ أَنَّهُم مُّلَاقُو رَبِّهِمْ وَأَنَّهُمْ إِلَيْهِ رَاجِعُونَ ",
+              " أَتَأْمُرُونَ ٱلنَّاسَ بِٱلْبِرِّ وَتَنسَوْنَ أَنفُسَكُمْ وَأَنتُمْ تَتْلُونَ ٱلْكِتَٰبَ ۚ أَفَلَا تَعْقِلُونَ",
           francais:
               "Al-Ladhīna Yažunnūna 'Annahum Mulāqū Rabbihim Wa 'Annahum 'Ilayhi Rāji`ūna",
           wolof:
@@ -685,7 +688,7 @@ Sourate baqara = Sourate(
           numv: 45,
           numero: '045',
           arabe:
-              "يَا بَنِي إِسْرَائِيلَ اذْكُرُوا نِعْمَتِيَ الَّتِي أَنْعَمْتُ عَلَيْكُمْ وَأَنِّي فَضَّلْتُكُمْ ع��لَى الْعَالَمِينَ ",
+              "وَٱسْتَعِينُوا۟ بِٱلصَّبْرِ وَٱلصَّلَوٰةِ ۚ وَإِنَّهَا لَكَبِيرَةٌ إِلَّا عَلَى ٱلْخَٰشِعِينَ",
           francais:
               "Yā Banī 'Isrā'īla Adhkurū Ni`matiya Allatī 'An`amtu `Alaykum Wa 'Annī Fađđaltukum `Alá Al-`Ālamīna",
           wolof:
@@ -2834,6 +2837,7 @@ Sourate baqara = Sourate(
           wolof:
               "Yàlla du teg kenn lu dul lu mu àttan. Lu mu def ci lu baax añe ko, lu mu def ci safaan yenu ko. Yàlla sunu Boroom, bul nu jàppee la nu fàtte walla nu juum. Te bul nu teg coono kem na nga ko tege woon ña nu jiitu woon. Te bul nu teg lu ëpp sunu kàttan, jéggal nu, baal nu, yërëm nu. Yaay sunu wéeruwaay, defal nu ndimbal ci kaw yéefar yi.")
     ]);
+
 Sourate imran = Sourate(
     numero: 3,
     nom: "Njabootu Himraan",
