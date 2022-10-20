@@ -23,3 +23,5 @@ build
 /settings_aar.gradle
 /.project
 /.idea
+.metadata
+.packages

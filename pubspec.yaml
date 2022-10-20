@@ -1,5 +1,5 @@
 name: coran
-description: A new Flutter application.
+description: Application coranique avec la possibilite de lire et d ecouter le coran en plus vous avez la traduction de tous les versets en wolof .
 version: 1.0.0+1
 
 environment:

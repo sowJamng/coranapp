@@ -45,3 +45,13 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+
+#Ignore by Ibrahima
+ios/Flutter/Debug.xcconfig
+ios/Flutter/Release.xcconfig
+ios/Runner.xcodeproj/project.pbxproj
+ios/Podfile
+pubspec.lock
+.metadata
+tests.output
+/ios
