@@ -16,6 +16,7 @@ import 'package:intl/date_symbol_data_local.dart' as intl_local_date_data;
 
 //116 and 122
 typedef void OnError(Exception exception);
+
 enum PlayerState { stopped, playing, paused }
 
 class ChatScreen extends StatefulWidget {
@@ -252,7 +253,8 @@ class _ChatScreenState extends State<ChatScreen> {
 
   void _showSnackBar(BuildContext context, String message) {
     final snackbar = SnackBar(content: Text(message));
-    Scaffold.of(context).showSnackBar(snackbar);
+    //Scaffold.of(context).showSnackBar(snackbar);
+    ScaffoldMessenger.of(context).showSnackBar(snackbar);
   }
 
   void verification(BuildContext context, int numv, int nums, int index) async {
@@ -403,8 +405,8 @@ class _ChatScreenState extends State<ChatScreen> {
                         favor.setNumverset(
                             widget.sourate.versets[index].getNumv());
                         favor.setNumsourate(widget.sourate.getNumero());
-                        Future<bool> f = helper.exist(
-                            favor.getNumverset(), favor.getNumsourate());
+                        /* Future<bool> f = helper.exist(
+                            favor.getNumverset(), favor.getNumsourate());*/
                         String vr = 'https://everyayah.com/data/' +
                             Parametres.lecteur.ayabyaya +
                             widget.numero +
@@ -556,12 +558,15 @@ class _ChatScreenState extends State<ChatScreen> {
                                         }),
                                     Builder(
                                       builder: (BuildContext context) {
-                                        return RaisedButton(
-                                          materialTapTargetSize:
-                                              MaterialTapTargetSize.shrinkWrap,
-                                          color: Parametres.fond
-                                              ? Color(0xFF223645)
-                                              : Colors.white,
+                                        return ElevatedButton(
+                                          //  style: ButtonStyle(
+                                          style: ElevatedButton.styleFrom(
+                                              // backgroundColor: MaterialStateProperty.all(Colors.green),
+                                              //materialTapTargetSize:
+                                              //  MaterialTapTargetSize.shrinkWrap,
+                                              primary: Parametres.fond
+                                                  ? Color(0xFF223645)
+                                                  : Colors.white),
                                           child: Icon(
                                             Icons.share,
                                             color: Colors.green,

@@ -283,8 +283,7 @@ Sourate fatiya = Sourate(
         wolof: "yoonu ñi Nga xéewale, wuuteek ñi Nga mere ak ñi réer.")
   ],
 );
-Sourate baqara = 
-Sourate(
+Sourate baqara = Sourate(
     numero: 2,
     nom: "Nag Wa",
     nbaya: '286',
@@ -442,9 +441,7 @@ Sourate(
       Verset(
           numv: 18,
           numero: '018',
-          arabe:
-              " صُمٌّۢ بُكْمٌ عُمْىٌۭ فَهُمْ لَا يَرْجِعُونَ
- ",
+          arabe: " صُمٌّۢ بُكْمٌ عُمْىٌۭ فَهُمْ لَا يَرْجِعُونَ",
           francais:
               " Yakādu Al-Barqu Yakhţafu 'Abşārahum Kullamā 'Ađā'a Lahum Mashaw Fīhi Wa 'Idhā 'Ažlama `Alayhim Qāmū Wa Law Shā'a Allāhu Ladhahaba Bisam`ihim Wa 'Abşārihim 'Inna Allāha `Alá Kulli Shay'in Qadīrun",
           wolof:
@@ -615,8 +612,7 @@ Sourate(
           numv: 37,
           numero: '037',
           arabe:
-              "فَتَلَقَّىٰٓ ءَادَمُ مِن رَّبِّهِۦ كَلِمَٰتٍۢ فَتَابَ عَلَيْهِ ۚ إِنَّهُۥ هُوَ ٱلتَّوَّابُ ٱلرَّحِيمُ
-",
+              "فَتَلَقَّىٰٓ ءَادَمُ مِن رَّبِّهِۦ كَلِمَٰتٍۢ فَتَابَ عَلَيْهِ ۚ إِنَّهُۥ هُوَ ٱلتَّوَّابُ ٱلرَّحِيمُ",
           francais:
               " Wa Al-Ladhīna Kafarū Wa Kadhabū Bi'āyātinā 'Ūlā'ika 'Aşhābu An-Nāri Hum Fīhā Khālidūna",
           wolof:

@@ -7,7 +7,6 @@ import 'package:coran/Screens/Parametres/Parametres.dart';
 import 'package:coran/Screens/Rappelslam/RappelsIslam.dart';
 import 'package:coran/Model//ReadPdf/ReadPdf.dart';
 import 'package:coran/Screens/ScreenSourates/sourates.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 import '../ScreenJuz/Ajiza.dart';

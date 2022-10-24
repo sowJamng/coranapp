@@ -4,7 +4,6 @@ import '../../Model/sourates/Allsourate.dart';
 import 'package:coran/Model/sourates/MesSourates.dart';
 import 'package:coran/Model/Menu/MyPopupItem.dart';
 import 'package:coran/Screens/Parametres/Parametres.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
@@ -12,6 +11,7 @@ import 'package:share/share.dart';
 import 'dart:async';
 
 typedef void OnError(Exception exception);
+
 enum PlayerState { stopped, playing, paused }
 
 class JusSelect extends StatefulWidget {
@@ -366,13 +366,11 @@ class _JusSelectState extends State<JusSelect> {
                                       ),
                                       Builder(
                                         builder: (BuildContext context) {
-                                          return RaisedButton(
-                                            color: Parametres.fond
-                                                ? Color(0xFF223645)
-                                                : Colors.white,
-                                            materialTapTargetSize:
-                                                MaterialTapTargetSize
-                                                    .shrinkWrap,
+                                          return ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                                primary: Parametres.fond
+                                                    ? Color(0xFF223645)
+                                                    : Colors.white),
                                             child: Icon(
                                               Icons.share,
                                               color: Colors.green,
