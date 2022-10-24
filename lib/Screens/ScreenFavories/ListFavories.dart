@@ -239,7 +239,8 @@ class _ListFavoriesState extends State<ListFavories> {
 
   void _showSnackBar(BuildContext context, String message) {
     final snackbar = SnackBar(content: Text(message));
-    Scaffold.of(context).showSnackBar(snackbar);
+    // Scaffold.of(context).showSnackBar(snackbar);
+    ScaffoldMessenger.of(context).showSnackBar(snackbar);
   }
 
   void _update(BuildContext context, Allfavories favorie) async {
